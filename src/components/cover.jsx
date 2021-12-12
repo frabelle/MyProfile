@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Container, Typography } from '@mui/material';
+import { Container, Typography, Chip } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Waves from '../image/layered-waves.svg'
 import Profile from '../image/profile.jpeg'
@@ -9,11 +9,10 @@ import Stack from '@mui/material/Stack';
 import "../App.css"
 import { styled } from '@mui/material/styles';
 
-const Item = styled(Paper)(({ theme }) => ({
+const Item = styled(Chip)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(0.5),
   textAlign: 'center',
-  borderRadius: '100px',
   backgroundColor:'#5c548a',
   color: '#ffffff'
 }));
@@ -57,21 +56,21 @@ const Cover = () =>{
                     Passionate about new technologies and their development💜
                 </Typography>
 
-                <Stack direction="row" spacing={2}
-                 sx={{
-                    display: 'flex',
-                    textAlign: 'center',
-                    alignContent: 'center',
-                    justifyContent: 'center',
-                    marginTop: '15px'
-                }}>
-                    <Item> &nbsp; Junior Developer &nbsp;</Item>
-                    <Item> &nbsp; UI/UX &nbsp;</Item>
-                    <Item> &nbsp; Systems Engineering &nbsp;</Item>
-                    <Item> &nbsp; Web &amp; Android App Developer  &nbsp;</Item>
-
-                </Stack>
             </Box>
+
+            <Stack direction="row" spacing={2}
+                sx={{
+                display: 'flex',
+                textAlign: 'center',
+                alignContent: 'center',
+                justifyContent: 'center',
+                marginTop: '15px'
+            }}>
+                <Item label="Junior Developer"/>
+                <Item label="UI/UX"/>
+                <Item label="Systems Engineering"/>
+                <Item label="Web &amp; Android App Developer"/>
+            </Stack>
 
         </Box>
         

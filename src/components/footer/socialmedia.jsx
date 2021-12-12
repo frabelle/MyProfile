@@ -12,62 +12,63 @@ import {
   import GitHubIcon from '@mui/icons-material/GitHub';
   import InstagramIcon from '@mui/icons-material/Instagram';
   import LinkedInIcon from '@mui/icons-material/LinkedIn';
+  import HikingIcon from '@mui/icons-material/Hiking';
+  import { styled } from '@mui/material/styles';
+
+  const SocialItem = styled(Stack)(({ theme }) => ({
+    display: 'flex',
+    textAlign: 'center',
+    alignContent: 'center',
+    alignItems: 'center',
+    padding: theme.spacing(0),
+  }));
 
 const SocialMedia = () => {
 
     return(
 
-        <div style={{margin: '40px'}}>
+        <div style={{marginTop: '40px', marginBottom: '40px', marginLeft:'40px'}}>
 
-            {/* <Typography variant="h6">
-                Social media
-            </Typography> */}
-
-            <Stack textAlign="left" direction="column" spacing={-1}>
-
-                <IconButton aria-label="delete" size="large" >
-                    <FacebookIcon fontSize="large" color="primary"/>
-                </IconButton>
-
-                <IconButton aria-label="delete" size="large" >
-                    <GitHubIcon fontSize="large" color="primary"/>
-                </IconButton>
-
-                <IconButton aria-label="delete" size="large" >
-                    <InstagramIcon fontSize="large" color="primary"/>
-                </IconButton>
-
-                <IconButton aria-label="delete" size="large" >
-                    <LinkedInIcon fontSize="large" color="primary"/>
-                </IconButton>
-
-            </Stack>      
-
-            <br/>   
+            <Stack direction="column" spacing={2}>
 
             <Typography variant="h6">
-                Contact information
+                Social media
             </Typography>
 
-            <Stack textAlign="left" direction="row" spacing={-1}>
+            <Typography variant="body2">
+                Here are my social media accounts 
+            </Typography>
 
-                <IconButton aria-label="delete" size="large" >
-                    <FacebookIcon fontSize="large" color="primary"/>
-                </IconButton>
+            <Stack textAlign="left" direction="column" spacing={1.5}>
 
-                <IconButton aria-label="delete" size="large" >
-                    <GitHubIcon fontSize="large" color="primary"/>
-                </IconButton>
+                <SocialItem direction="row" spacing={1}>
+                    <FacebookIcon fontSize="medium" color="primary"/>
+                    <Typography variant="body2">Renchi Frabelle</Typography>
+                </SocialItem>
 
-                <IconButton aria-label="delete" size="large" >
-                    <InstagramIcon fontSize="large" color="primary"/>
-                </IconButton>
+                <SocialItem direction="row" spacing={1}>
+                    <GitHubIcon fontSize="medium" color="primary"/>
+                    <Typography variant="body2">frabelle</Typography>
+                </SocialItem>
 
-                <IconButton aria-label="delete" size="large" >
-                    <LinkedInIcon fontSize="large" color="primary"/>
-                </IconButton>
+                <SocialItem direction="row" spacing={1}>
+                    <InstagramIcon fontSize="medium" color="primary"/>
+                    <Typography variant="body2">renchifrabelle</Typography>
+                </SocialItem>
 
-            </Stack>           
+                <SocialItem direction="row" spacing={1}>
+                    <HikingIcon fontSize="medium" color="primary"/>
+                    <Typography variant="body2">renchifrabelle</Typography>
+                </SocialItem>
+
+                <SocialItem direction="row" spacing={1}>
+                    <LinkedInIcon fontSize="medium" color="primary"/>
+                    <Typography variant="body2">Renchi Meléndez</Typography>
+                </SocialItem>
+
+                </Stack> 
+
+            </Stack>            
 
         </div>
 

@@ -8,10 +8,6 @@ import {
     Typography,
     Stack
   } from '@mui/material';
-  import FacebookIcon from '@mui/icons-material/Facebook';
-  import GitHubIcon from '@mui/icons-material/GitHub';
-  import InstagramIcon from '@mui/icons-material/Instagram';
-  import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 const Copyright = () => {
 
@@ -28,7 +24,7 @@ const Copyright = () => {
                 alignItems: 'center'
             }}>
                 <Typography variant="body2" color="#f5f5f5">
-                    Copyright © Renchi Meléndez 2022
+                    Copyright © 2022 My Profile by Renchi Meléndez
                 </Typography>
             </Box>
 

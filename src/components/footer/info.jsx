@@ -20,7 +20,7 @@ const Info = () => {
 
                 <img
                     src={Logo}
-                    alt="imagen de prueba"
+                    alt="Logo"
                     width= "100px"
                 />
 

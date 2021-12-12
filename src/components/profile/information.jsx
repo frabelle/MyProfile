@@ -50,7 +50,7 @@ const PersonalInformation = () => {
                 
                 
                 <Stack direction="row">
-                    <Tooltip title="Residence Country">
+                    <Tooltip title="Country of Residence">
                         <HomeIcon/>
                     </Tooltip>
                     <Typography variant="body1">
