@@ -15,11 +15,10 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import DialogTitle from '@mui/material/DialogTitle';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import Logo from '../image/logo.svg'
 
-const pages = ['Profile', 'Skills', 'Portfolio', 'Achievements'];
+const pages = ['Profile', 'Skills', 'Portfolio', 'Achievements', 'Contact me'];
 const settings = ['English', 'Spanish'];
 
 const ResponsiveAppBar = () => {
@@ -177,7 +176,7 @@ const ResponsiveAppBar = () => {
 
                 <DialogContentText marginBottom="-10px">
                     <strong>Feature in progress.</strong> Sorry for the inconvenience, it will be up and running soon. 
-                    Meanwhile I invite you to explore the site😊❤
+                    In the meanwhile, I invite you to explore my website😊❤
                 </DialogContentText>
 
             </DialogContent>

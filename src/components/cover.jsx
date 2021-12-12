@@ -14,7 +14,8 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(0.5),
   textAlign: 'center',
   borderRadius: '100px',
-  backgroundColor:'#d9b3ca',
+  backgroundColor:'#5c548a',
+  color: '#ffffff'
 }));
 
 const Cover = () =>{
@@ -40,7 +41,7 @@ const Cover = () =>{
             <Box textAlign="center" marginTop="-11%">
                 <img
                     className="imgCircle"
-                    src={Logo}
+                    src={Profile}
                     alt="imagen de prueba"
                 />
             </Box>
@@ -52,18 +53,22 @@ const Cover = () =>{
                     Meléndez Simplina
                 </Typography>
 
+                <Typography variant="body1">
+                    Passionate about new technologies and their development💜
+                </Typography>
+
                 <Stack direction="row" spacing={2}
                  sx={{
                     display: 'flex',
                     textAlign: 'center',
                     alignContent: 'center',
                     justifyContent: 'center',
-                    marginTop: '10px'
+                    marginTop: '15px'
                 }}>
-                    <Item> &nbsp; Attitude 1 &nbsp;</Item>
-                    <Item> &nbsp; Attitude 2 &nbsp;</Item>
-                    <Item> &nbsp; Attitude 3 &nbsp;</Item>
-                    <Item> &nbsp; Attitude 4 &nbsp;</Item>
+                    <Item> &nbsp; Junior Developer &nbsp;</Item>
+                    <Item> &nbsp; UI/UX &nbsp;</Item>
+                    <Item> &nbsp; Systems Engineering &nbsp;</Item>
+                    <Item> &nbsp; Web &amp; Android App Developer  &nbsp;</Item>
 
                 </Stack>
             </Box>
