@@ -160,15 +160,29 @@ const theme = createTheme({
         },
         divider: '#E6E8F0',
         primary: {
-            main: '#5048E5',
+            main: '#211940',
             light: '#828DF8',
             dark: '#3832A0',
             contrastText: '#FFFFFF'
         },
         secondary: {
-            main: '#828DF8',
+            main: '#5c548a',
             light: '#FFFFFF',
             dark: '#3832A0',
+            contrastText: '#0000000'
+        },
+        other2: {
+            main: '#b897c1',
+            contrastText: '#FFFFFF'
+
+        },
+        other3: {
+            main: '#d9b3ca',
+            contrastText: '#FFFFFF'
+
+        },
+        other4: {
+            main: '#9b87bc',
             contrastText: '#0000000'
         },
         success: {
