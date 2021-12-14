@@ -1,12 +1,5 @@
-import MuithemeProvider from '@mui/material/styles/ThemeProvider';
-import theme from './styles/Theme'
-import TopBar from './components/topbar'
-import Cover from './components/cover'
-import Profile from './pages/profile';
-import Footer from './pages/footer';
-import Test from './components/test'
-
-
+import * as React from 'react';
+import PropTypes from 'prop-types';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -17,31 +10,6 @@ import Container from '@mui/material/Container';
 import Fab from '@mui/material/Fab';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 import Zoom from '@mui/material/Zoom';
-
-function App(props) {
-  return (
-    <MuithemeProvider theme={theme}>
-      
-      <div id="back-to-top-anchor"/>
-
-      <TopBar/>
-      
-      <Cover/>
-      <Profile/>
-      
-      <div className="App-background-footer">
-        <Footer/>
-      </div>
-
-      <ScrollTop {...props}>
-        <Fab color="primary" size="small" aria-label="scroll back to top">
-          <KeyboardArrowUpIcon />
-        </Fab>
-      </ScrollTop>
-      
-    </MuithemeProvider>
-  );
-}
 
 function ScrollTop(props) {
   const { children, window } = props;
@@ -80,4 +48,44 @@ function ScrollTop(props) {
   );
 }
 
-export default App;
+ScrollTop.propTypes = {
+  children: PropTypes.element.isRequired,
+  /**
+   * Injected by the documentation to work in an iframe.
+   * You won't need it on your project.
+   */
+  window: PropTypes.func,
+};
+
+export default function BackToTop(props) {
+  return (
+    <React.Fragment>
+      <CssBaseline />
+      <AppBar>
+        <Toolbar>
+          <Typography variant="h6" component="div">
+            Scroll to see button
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Toolbar id="back-to-top-anchor" />
+      <Container>
+        <Box sx={{ my: 2 }}>
+          {[...new Array(12)]
+            .map(
+              () => `Cras mattis consectetur purus sit amet fermentum.
+Cras justo odio, dapibus ac facilisis in, egestas eget quam.
+Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+Praesent commodo cursus magna, vel scelerisque nisl consectetur et.`,
+            )
+            .join('\n')}
+        </Box>
+      </Container>
+      <ScrollTop {...props}>
+        <Fab color="secondary" size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
+    </React.Fragment>
+  );
+}
