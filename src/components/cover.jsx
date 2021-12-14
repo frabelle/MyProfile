@@ -1,11 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Container, Typography, Chip } from '@mui/material';
+import { Container, Typography, Chip, Stack } from '@mui/material';
 import Paper from '@mui/material/Paper';
 import Waves from '../image/layered-waves.svg'
 import Profile from '../image/profile.jpeg'
 import Logo from '../image/logo.svg'
-import Stack from '@mui/material/Stack';
 import "../App.css"
 import { styled } from '@mui/material/styles';
 
@@ -16,6 +15,13 @@ const Item = styled(Chip)(({ theme }) => ({
   backgroundColor:'#5c548a',
   color: '#ffffff'
 }));
+
+const Contenedor = styled(Stack)(({ theme }) => ({
+    display: 'flex',
+    textAlign: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
+  }));
 
 const Cover = () =>{
 
@@ -52,25 +58,28 @@ const Cover = () =>{
                     Meléndez Simplina
                 </Typography>
 
-                <Typography variant="body1">
+                <Typography variant="body1" margin={{xs: 1}}>
                     Passionate about new technologies and their development💜
                 </Typography>
 
             </Box>
 
-            <Stack direction="row" spacing={2}
+            <Contenedor direction={{xs:"column", sm:"column", md:"row"}} spacing={2}
                 sx={{
-                display: 'flex',
-                textAlign: 'center',
-                alignContent: 'center',
-                justifyContent: 'center',
                 marginTop: '15px'
             }}>
-                <Item label="Junior Developer"/>
-                <Item label="UI/UX"/>
-                <Item label="Systems Engineering"/>
-                <Item label="Web &amp; Android App Developer"/>
-            </Stack>
+
+                <Contenedor direction={{xs: 'row'}} spacing={2}>
+                    <Item label="Junior Developer"/>
+                    <Item label="UI/UX"/>
+                </Contenedor>
+
+                <Contenedor direction={{xs: 'row'}} spacing={2}>
+                    <Item label="Systems Engineering"/>
+                    <Item label="Web &amp; Android App Developer"/>
+                </Contenedor>
+
+            </Contenedor>
 
         </Box>
         
