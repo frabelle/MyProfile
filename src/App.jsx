@@ -5,6 +5,7 @@ import Cover from './components/cover'
 import Profile from './pages/profile';
 import Footer from './pages/footer';
 import Portfolio from './pages/portfolio';
+import Achievement from './pages/achievement';
 import Test from './components/test'
 
 import useScrollTrigger from '@mui/material/useScrollTrigger';
@@ -24,67 +25,14 @@ function App(props) {
       <Cover/>
       <Profile/>
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-
       <Portfolio/>
 
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
+      <Achievement/>
       
+        <br></br>
+        <br></br>
+        <br></br>
+
       <div className="App-background-footer">
         <Footer/>
       </div>

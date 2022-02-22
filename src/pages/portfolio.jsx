@@ -1,6 +1,6 @@
 import React from 'react';
 import CardProject from '../components/portfolio/cardproject'
-import { Container, Typography, Box } from '@mui/material';
+import { Container, Typography, Box, Grid } from '@mui/material';
 import { v4 as uuidv4 } from "uuid";
 import Carroussel from '../components/portfolio/carrousel';
 import { margin } from '@mui/system';
@@ -40,35 +40,17 @@ const Portfolio = () => {
 
     return(
 
-        <Box sx={{
-            background: '#211940'
-        }}>
+        <Box px={'40px'}>
 
-            <Box sx={{py: 8}}>
+          <Typography variant="h4" textAlign={'left'} color="primary.main">
+              Highlight Projects
+          </Typography>
 
-                <Typography variant="h4" textAlign={'center'} color="primary.contrastText">
-                    Let's check some of my personal projects
-                </Typography>
+          <Typography variant="body2" textAlign={'left'} color="primary.main">
+              Most of these projects were developed from university assignments
+          </Typography>
 
-                <Typography variant="body2" textAlign={'center'} sx={{p:1}} color="primary.contrastText">
-                    Most of these projects were developed from university assignments
-                </Typography>
-
-                <br/><br/>
-
-                <Carroussel
-                cards={cards}
-                height="600px"
-                width="90%"
-                margin="0 auto"
-                offset={2}
-                showArrows={false}
-                /> 
-
-            </Box>
-
-           
-        </Box>
+      </Box>
         
         
         
