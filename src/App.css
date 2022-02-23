@@ -52,7 +52,10 @@
     width: 150px;
     height: 150px;
     border-radius: 100%;
-    border: 2px solid #444;
+}
+
+.rcorners1 {
+    border-radius: 5px;
 }
 
 .App-Paper {

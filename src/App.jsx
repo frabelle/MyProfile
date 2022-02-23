@@ -27,8 +27,6 @@ function App(props) {
 
       <Portfolio/>
 
-      <Test/>
-
       <br></br>
 
       <Achievement/>
