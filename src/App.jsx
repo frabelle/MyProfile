@@ -27,7 +27,13 @@ function App(props) {
 
       <Portfolio/>
 
+      <Test/>
+
+      <br></br>
+
       <Achievement/>
+
+      <Test/>
       
         <br></br>
         <br></br>

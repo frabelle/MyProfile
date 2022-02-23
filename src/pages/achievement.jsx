@@ -9,7 +9,7 @@ const Achievement = () => {
     
     return(
 
-        <Box px={'40px'} py={'30px'}>
+        <Box px={'40px'}>
 
           <Typography variant="h4" textAlign={'left'} color="primary.main">
             Achievements
