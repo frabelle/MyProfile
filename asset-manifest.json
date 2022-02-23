@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/MyProfile/static/css/main.113139fb.chunk.css",
-    "main.js": "/MyProfile/static/js/main.813234a1.chunk.js",
-    "main.js.map": "/MyProfile/static/js/main.813234a1.chunk.js.map",
-    "runtime-main.js": "/MyProfile/static/js/runtime-main.5a4d9346.js",
-    "runtime-main.js.map": "/MyProfile/static/js/runtime-main.5a4d9346.js.map",
-    "static/js/2.7c990c2a.chunk.js": "/MyProfile/static/js/2.7c990c2a.chunk.js",
-    "static/js/2.7c990c2a.chunk.js.map": "/MyProfile/static/js/2.7c990c2a.chunk.js.map",
-    "static/js/3.b5c37494.chunk.js": "/MyProfile/static/js/3.b5c37494.chunk.js",
-    "static/js/3.b5c37494.chunk.js.map": "/MyProfile/static/js/3.b5c37494.chunk.js.map",
+    "main.css": "/MyProfile/static/css/main.98218788.chunk.css",
+    "main.js": "/MyProfile/static/js/main.a4dd763c.chunk.js",
+    "main.js.map": "/MyProfile/static/js/main.a4dd763c.chunk.js.map",
+    "runtime-main.js": "/MyProfile/static/js/runtime-main.a93a3aaf.js",
+    "runtime-main.js.map": "/MyProfile/static/js/runtime-main.a93a3aaf.js.map",
+    "static/js/2.6f99a9bc.chunk.js": "/MyProfile/static/js/2.6f99a9bc.chunk.js",
+    "static/js/2.6f99a9bc.chunk.js.map": "/MyProfile/static/js/2.6f99a9bc.chunk.js.map",
+    "static/js/3.c2c8f159.chunk.js": "/MyProfile/static/js/3.c2c8f159.chunk.js",
+    "static/js/3.c2c8f159.chunk.js.map": "/MyProfile/static/js/3.c2c8f159.chunk.js.map",
     "index.html": "/MyProfile/index.html",
-    "static/css/main.113139fb.chunk.css.map": "/MyProfile/static/css/main.113139fb.chunk.css.map",
-    "static/js/2.7c990c2a.chunk.js.LICENSE.txt": "/MyProfile/static/js/2.7c990c2a.chunk.js.LICENSE.txt",
+    "static/css/main.98218788.chunk.css.map": "/MyProfile/static/css/main.98218788.chunk.css.map",
+    "static/js/2.6f99a9bc.chunk.js.LICENSE.txt": "/MyProfile/static/js/2.6f99a9bc.chunk.js.LICENSE.txt",
     "static/media/layered-waves.6d9bf144.svg": "/MyProfile/static/media/layered-waves.6d9bf144.svg",
     "static/media/logo.ed1cdb4e.svg": "/MyProfile/static/media/logo.ed1cdb4e.svg",
     "static/media/profile.6eddc43a.jpeg": "/MyProfile/static/media/profile.6eddc43a.jpeg",
@@ -19,9 +19,9 @@
     "static/media/App.css": "/MyProfile/static/media/stacked-steps-2.ecab8c3c.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.5a4d9346.js",
-    "static/js/2.7c990c2a.chunk.js",
-    "static/css/main.113139fb.chunk.css",
-    "static/js/main.813234a1.chunk.js"
+    "static/js/runtime-main.a93a3aaf.js",
+    "static/js/2.6f99a9bc.chunk.js",
+    "static/css/main.98218788.chunk.css",
+    "static/js/main.a4dd763c.chunk.js"
   ]
 }
