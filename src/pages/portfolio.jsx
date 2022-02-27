@@ -1,13 +1,13 @@
 import React from 'react';
 import CarrouselPortfolio from '../components/portfolio/carrousel';
-import { Container, Typography, Box, Grid } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 
 const Portfolio = () => {
 
     return(
 
         <div>
-            <Box px={'40px'}>
+            <Box px={'40px'} >
 
             <Typography variant="h4" textAlign={'left'} color="primary.main">
                 Highlight Projects
@@ -19,7 +19,9 @@ const Portfolio = () => {
 
             </Box>
 
-            <CarrouselPortfolio/>
+            <Box marginLeft={'20px'}>
+                <CarrouselPortfolio/>
+            </Box>
 
         </div>       
         

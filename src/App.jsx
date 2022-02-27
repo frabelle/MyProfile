@@ -29,23 +29,18 @@ function App(props) {
           <Profile/>
         </div>
 
-        
         <div id="Portfolio">
           <Portfolio/>
         </div>
-      
 
-      <br></br>
+        <div id="Achievements">
+          <Achievement/>
+        </div>
 
-      <div id="Achievements">
-        <Achievement/>
-      </div>
-
-      <Test/>
-      
         <br></br>
         <br></br>
-        <br></br>
+
+      {/* <Test/> */}
 
       <div id="Contact me" className="App-background-footer">
         <Footer/>

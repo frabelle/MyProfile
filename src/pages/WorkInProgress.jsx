@@ -1,6 +1,5 @@
 import React from 'react';
-import { Container, Typography, Box, Grid } from '@mui/material';
-import Wip from '../image/utils/wip.svg'
+import { Typography, Grid } from '@mui/material';
 import Coding from '../image/utils/coding.png'
 
 export default function WipPage() {

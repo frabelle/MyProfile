@@ -1,22 +1,29 @@
 import React from 'react';
-import { Container, Typography, Box, Grid } from '@mui/material';
-
+import { Typography, Box } from '@mui/material';
+import CarrouselAchievements from '../components/achievements/carrousel';
 const Achievement = () => {
     
     return(
 
-        <Box px={'40px'}>
+      <Box py={5}>
 
-          <Typography variant="h4" textAlign={'left'} color="primary.main">
-            Achievements
-          </Typography>
+          <Box px={'40px'}>
 
-          <Typography variant="body2" textAlign={'left'} color="primary.main">
-            Certifications, Awards, Education and Courses
-          </Typography>
+            <Typography variant="h4" textAlign={'left'} color="primary.main">
+              Achievements
+            </Typography>
+
+            <Typography variant="body2" textAlign={'left'} color="primary.main">
+              Certifications, Awards, Education and Courses
+            </Typography>
+
+          </Box>
+
+          <Box marginLeft={'10px'}>
+            <CarrouselAchievements/>
+          </Box>
 
       </Box>
-        
         
         
     );

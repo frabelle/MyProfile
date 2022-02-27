@@ -1,18 +1,13 @@
 import React from 'react'
 import {
-    Box,
-    Card,
-    CardContent,
-    IconButton,
-    Grid,
     Typography,
-    Stack
+    Stack, 
+    Link
   } from '@mui/material';
   import FacebookIcon from '@mui/icons-material/Facebook';
   import GitHubIcon from '@mui/icons-material/GitHub';
   import InstagramIcon from '@mui/icons-material/Instagram';
   import LinkedInIcon from '@mui/icons-material/LinkedIn';
-  import HikingIcon from '@mui/icons-material/Hiking';
   import { styled } from '@mui/material/styles';
 
   const SocialItem = styled(Stack)(({ theme }) => ({
@@ -36,35 +31,39 @@ const SocialMedia = () => {
             </Typography>
 
             <Typography variant="body2">
-                Here are my social media accounts 
+                If you want to know more about myself,
+                here are my social media accounts 
             </Typography>
 
             <Stack textAlign="left" direction="column" spacing={1.5}>
 
-                <SocialItem direction="row" spacing={1}>
-                    <FacebookIcon fontSize="medium" color="primary"/>
-                    <Typography variant="body2">Renchi Frabelle</Typography>
-                </SocialItem>
+                <Link underline='none' href="https://www.facebook.com/RenchiFrabelle" target={'_blank'}>
+                    <SocialItem direction="row" spacing={1}>
+                        <FacebookIcon fontSize="medium" color="primary"/>
+                        <Typography variant="body2">Renchi Frabelle</Typography>
+                    </SocialItem>
+                </Link>
 
-                <SocialItem direction="row" spacing={1}>
-                    <GitHubIcon fontSize="medium" color="primary"/>
-                    <Typography variant="body2">frabelle</Typography>
-                </SocialItem>
+                <Link underline='none' href="https://github.com/frabelle" target={'_blank'}>
+                    <SocialItem direction="row" spacing={1}>
+                        <GitHubIcon fontSize="medium" color="primary"/>
+                        <Typography variant="body2">frabelle</Typography>
+                    </SocialItem>
+                </Link>
 
-                <SocialItem direction="row" spacing={1}>
-                    <InstagramIcon fontSize="medium" color="primary"/>
-                    <Typography variant="body2">renchifrabelle</Typography>
-                </SocialItem>
+                <Link underline='none' href="https://www.instagram.com/renchifrabelle/" target={'_blank'}>
+                    <SocialItem direction="row" spacing={1}>
+                        <InstagramIcon fontSize="medium" color="primary"/>
+                        <Typography variant="body2">renchifrabelle</Typography>
+                    </SocialItem>
+                </Link>
 
-                <SocialItem direction="row" spacing={1}>
-                    <HikingIcon fontSize="medium" color="primary"/>
-                    <Typography variant="body2">renchifrabelle</Typography>
-                </SocialItem>
-
-                <SocialItem direction="row" spacing={1}>
-                    <LinkedInIcon fontSize="medium" color="primary"/>
-                    <Typography variant="body2">Renchi Meléndez</Typography>
-                </SocialItem>
+                <Link underline='none' href="https://www.linkedin.com/in/RenchiFrabelle" target={'_blank'}>
+                    <SocialItem direction="row" spacing={1}>
+                        <LinkedInIcon fontSize="medium" color="primary"/>
+                        <Typography variant="body2">Renchi Meléndez</Typography>
+                    </SocialItem>
+                </Link>
 
                 </Stack> 
 

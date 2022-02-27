@@ -1,53 +1,87 @@
 import React from 'react';
-import { Carousel } from '@trendyol-js/react-carousel';
-import Item from './portfolio/projectcircle';
-import Profile from '../image/portfolio/sample.jpg'
-import Profile2 from '../image/portfolio/sample.jpg'
+import { Box} from '@mui/material';
+//import { Carousel } from '@trendyol-js/react-carousel';
+import Carousel from 'react-elastic-carousel';
+import Item from './achievementcircle';
+import Award from '../../image/achievements/awards.png'
+import Trophy from '../../image/achievements/trophy.png'
+import License from '../../image/achievements/license.png'
+import Certificate from '../../image/achievements/certificate.png'
 
 const CarrouselAchievements = () => {
 
   const cards = [
     {
-      name: "Hola",
-      image: Profile
+      name: "Salesforce Certified Administrator",
+      image: License,
+      type: "Certification",
+      date: "January, 2022"
     },
     {
-      name: "Hola2",
-      image: Profile2
+      name: "Introduction to Laravel Framework",
+      image: Certificate,
+      type: "Diploma",
+      date: "January, 2022 - February, 2022"
     },
     {
-      name: "Hola3",
-      image: Profile
+      name: "Module I Agile & Scrum Framework",
+      image: Certificate,
+      type: "Diploma",
+      date: "January, 2022 - February, 2022"   
     },
     {
-      name: "Hola4",
-      image: Profile2
+      name: "Excellence Academy 2020",
+      image: Award,
+      type: "Honors",
+      date: "November, 2021"
     },
     {
-      name: "Hola5",
-      image: Profile
+      name: "Trailhead Bootcamp for New Admins",
+      image: Certificate,
+      type: "Diploma",
+      date: "October, 2021 - November, 2021"
     },
     {
-      name: "Hola6",
-      image: Profile2
+      name: "User Inteface Design with Adobe XD",
+      image: Certificate,
+      type: "Diploma",
+      date: "July, 2021 - August, 2021"
     },
     {
-      name: "Hola7",
-      image: Profile
+      name: "Excellence Academy 2019",
+      image: Award,
+      type: "Honors",
+      date: "Octuber, 2020"
     },
     {
-      name: "Hola8",
-      image: Profile2
+      name: "Intellectual Production Contest UCA",
+      image: Trophy,
+      type: "Award",
+      date: "May, 2020"
     }
   ];
+
+  const breakPoints = [
+    { width: 1, itemsToShow: 1 },
+    { width: 550, itemsToShow: 2},
+    { width: 850, itemsToShow: 3},
+    { width: 1150, itemsToShow: 3.5},
+    { width: 1450, itemsToShow: 4.5 },
+    { width: 1750, itemsToShow: 5.5 },
+  ]
+
   return(
-    <div style={{marginLeft: '40px', marginTop: '20px'}}>
-      <Carousel show={6.5} swiping={true} slide={3} leftArrow={false} rightArrow={false}>
+    <Box style={{marginLeft: '0px', marginTop: '20px'}} sx={{ justifyContent: 'center' }}>
+      <Carousel itemsToShow={3.5} itemsToScroll={1} focusOnSelect={true} showArrows={false}
+        breakPoints={breakPoints}>
+
         {cards.map((data) => (
-          <Item name={data.name} image={data.image}/>
+          <Item name={data.name} image={data.image} type={data.type}
+            date={data.date}/>
         ))}
+
       </Carousel>
-    </div>
+    </Box>
 	
   );
   };

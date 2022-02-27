@@ -1,12 +1,6 @@
 import React from 'react'
 import {
-    Box,
-    Card,
-    CardContent,
-    IconButton,
-    Grid,
-    Typography,
-    Stack
+    Grid
   } from '@mui/material';
 import Copyright from '../components/footer/copyright';
 import SocialMedia from '../components/footer/socialmedia';

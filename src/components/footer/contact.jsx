@@ -1,12 +1,9 @@
 import React from 'react'
 import {
-    Box,
-    Card,
-    CardContent,
-    IconButton,
     Button,
     Typography,
-    Stack
+    Stack,
+    Link
   } from '@mui/material';
 import Logo from '../../image/logo.svg'
 import HomeIcon from '@mui/icons-material/Home';
@@ -37,27 +34,33 @@ const ContactInfo = () => {
                 </Typography>
 
                 <Typography variant="body2">
-                        Let's talk! Here are some ways where you can contact me
+                        Let's talk! If you have some questions
+                        here are some ways where you can contact me. 
+                        Also, I'm open to recomendations 😊
                 </Typography>
 
                 <Stack textAlign="left" direction="row" spacing={3}>
 
                     <Stack textAlign="left" direction="column" spacing={2}>
 
-                        <SocialItem direction="row" spacing={1}>
+                        {/* <SocialItem direction="row" spacing={1}>
                             <HomeIcon fontSize="medium" color="primary"/>
                             <Typography variant="body2">Mateare, Managua. Nicaragua</Typography>
-                        </SocialItem>
+                        </SocialItem> */}
 
-                        <SocialItem direction="row" spacing={1}>
-                            <PhoneIcon fontSize="medium" color="primary"/>
-                            <Typography variant="body2">+505 5828-9007</Typography>
-                        </SocialItem>
+                        <Link underline='none' href='https://api.whatsapp.com/send?phone=+50558289007' target={'_blank'}>
+                            <SocialItem direction="row" spacing={1}>
+                                <PhoneIcon fontSize="medium" color="primary"/>
+                                <Typography variant="body2">+505 5828-9007</Typography>
+                            </SocialItem>
+                        </Link>
 
-                        <SocialItem direction="row" spacing={1}>
-                            <EmailIcon fontSize="medium" color="primary"/>
-                            <Typography variant="body2">renchifrabelle@gmail.com</Typography>
-                        </SocialItem>
+                        <Link underline='none' href="mailto: renchifrabelle@gmail.com">
+                            <SocialItem direction="row" spacing={1}>
+                                <EmailIcon fontSize="medium" color="primary"/>
+                                <Typography variant="body2">renchifrabelle@gmail.com</Typography>
+                            </SocialItem>
+                        </Link>
 
                     </Stack>        
 
