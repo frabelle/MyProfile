@@ -23,13 +23,23 @@ function App(props) {
       <TopBar/>
       
       <Cover/>
-      <Profile/>
 
-      <Portfolio/>
+        <div id="Profile">
+        <div id="Skills"></div>
+          <Profile/>
+        </div>
+
+        
+        <div id="Portfolio">
+          <Portfolio/>
+        </div>
+      
 
       <br></br>
 
-      <Achievement/>
+      <div id="Achievements">
+        <Achievement/>
+      </div>
 
       <Test/>
       
@@ -37,7 +47,7 @@ function App(props) {
         <br></br>
         <br></br>
 
-      <div className="App-background-footer">
+      <div id="Contact me" className="App-background-footer">
         <Footer/>
       </div>
 

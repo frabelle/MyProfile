@@ -6,21 +6,22 @@ const Portfolio = () => {
 
     return(
 
-        <Box px={'40px'}>
+        <div>
+            <Box px={'40px'}>
 
-          <Typography variant="h4" textAlign={'left'} color="primary.main">
-              Highlight Projects
-          </Typography>
+            <Typography variant="h4" textAlign={'left'} color="primary.main">
+                Highlight Projects
+            </Typography>
 
-          <Typography variant="body2" textAlign={'left'} color="primary.main">
-              Most of these projects were developed from university assignments
-          </Typography>
+            <Typography variant="body2" textAlign={'left'} color="primary.main">
+                Most of these projects were developed from university assignments
+            </Typography>
 
-          <CarrouselPortfolio/>
+            </Box>
 
-      </Box>
-        
-        
+            <CarrouselPortfolio/>
+
+        </div>       
         
     );
 };

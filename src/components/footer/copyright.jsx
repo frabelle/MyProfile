@@ -15,7 +15,7 @@ const Copyright = () => {
 
         <div style={{textAlign: 'center'}}>
 
-            <Box height="80px" sx={{
+            <Box height="60px" sx={{
                 backgroundColor: '#211940',
                 display: 'flex',
                 textAlign: 'center',

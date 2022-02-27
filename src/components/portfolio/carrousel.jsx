@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from '@trendyol-js/react-carousel';
 import Item from './projectcircle';
 import UniverseHero from '../../image/portfolio/Icons/UniverseHero.jpeg'
-import RolyKermesse from '../../image/portfolio/Icons/RolyKermesse.png'
+import RolyKermesse from '../../image/portfolio/Icons/RolyKermesse.jpg'
 import iCareAboutU from '../../image/portfolio/Icons/iCareAboutU.png'
 import AttentipRecipes from '../../image/portfolio/Icons/AttentipRecipes.png'
 import Pokedex from '../../image/portfolio/Icons/Pokedex.png'
@@ -12,6 +12,7 @@ import CompuTecno from '../../image/portfolio/Icons/CompuTecno.png'
 import PPP from '../../image/portfolio/Icons/PPP.png'
 import GrandmaGarden from '../../image/portfolio/Icons/GrandmaGarden.png'
 import MyProfile from '../../image/portfolio/Icons/MyProfile.png'
+import RolyLab from '../../image/portfolio/Icons/RolyLab.png'
 
 const CarrouselPortfolio = () => {
 
@@ -29,6 +30,10 @@ const CarrouselPortfolio = () => {
       image: Pokedex
     },
     {
+      name: "Michi App",
+      image: MichiApp
+    },
+    {
       name: "Roly Kermesse",
       image: RolyKermesse
     },
@@ -37,16 +42,16 @@ const CarrouselPortfolio = () => {
       image: MygroKermesse
     },
     {
-      name: "Michi App",
-      image: MichiApp
-    },
-    {
       name: "Computecno Project",
       image: CompuTecno
     },
     {
       name: "Universe Hero",
       image: UniverseHero
+    },
+    {
+      name: "RolyLab",
+      image: RolyLab
     },
     {
       name: "Grandma's Garden",
@@ -61,10 +66,12 @@ const CarrouselPortfolio = () => {
       image: MyProfile
     }
   ];
+
   return(
     <div style={{marginLeft: '0px', marginTop: '20px'}}>
 
-      <Carousel show={6.5} swiping={true} slide={3} leftArrow={false} rightArrow={false}>
+      <Carousel show={6.5} swiping={true} slide={3} 
+        leftArrow={false} rightArrow={false} responsive={true}>
         {cards.map((data) => (
           <Item name={data.name} image={data.image}/>
         ))}

@@ -53,7 +53,7 @@ const Cover = () =>{
 
             <Box textAlign="center" marginTop="10px">
 
-                <Typography variant="h4">
+                <Typography variant="h3" px={5}>
                     Renchi Frabelle 
                     Meléndez Simplina
                 </Typography>
@@ -70,13 +70,13 @@ const Cover = () =>{
             }}>
 
                 <Contenedor direction={{xs: 'row'}} spacing={2}>
-                    <Item label="Junior Developer"/>
+                    <Item label="Jr. Software Developer"/>
                     <Item label="UI/UX"/>
                 </Contenedor>
 
                 <Contenedor direction={{xs: 'row'}} spacing={2}>
                     <Item label="Systems Engineering"/>
-                    <Item label="Web &amp; Android App Developer"/>
+                    <Item label="Salesforce Administrator"/>
                 </Contenedor>
 
             </Contenedor>

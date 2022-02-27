@@ -12,14 +12,14 @@ import { height } from '@mui/system';
 
 export default function CardInfo (props) {
     return(
-        <Box elevation='12' style={{
-            backgroundColor:'#5c548a',
+        <Box elevation='12'
+            style={{
             borderRadius: '10px'}}
-            height={{xs:'400px', sm: '500px', md:'300px',lg:'350px'}} 
             width={{xs:'400px',sm:'500px', md:'300px' ,lg:'350px'}}>
 
             <img
                 src={props.image}
+                style={{borderRadius: '10px'}}
                 alt="imagen de prueba"
                 width="100%"
             />

@@ -1,13 +1,13 @@
-import React from 'react';
-import { Box, Typography, Chip, Stack } from '@mui/material';
+import * as React from 'react';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { fontSize } from '@mui/system';
-export default function CircleProject (props) {
+
+export default function DialogProject(props) {
 
     const [open, setOpen] = React.useState(false);
 
@@ -19,22 +19,10 @@ export default function CircleProject (props) {
         setOpen(false);
       };
 
-  return(
-      <div>
-        <div style={{textAlign: 'center', marginInline: '0px'}}>
-            <img
-                    className="imgIcons"
-                    src={props.image}
-                    alt="imagen de prueba"
-                    onClick={handleClickOpen}
-                />
-        {/* <Typography variant="overline" display="block" xs={{fontSize:'0px'}} gutterBottom>
-            {props.name}
-        </Typography> */}
-        </div>
-
-        <Dialog
-            open={open}
+    return(
+        <div>
+            <Dialog
+            open={props.status}
             onClose={handleClose}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
@@ -60,7 +48,8 @@ export default function CircleProject (props) {
                 </Box>
 
                 <DialogContentText marginBottom="-10px">
-                    <strong>{props.name}</strong>
+                    <strong>Feature in progress.</strong> Sorry for the inconvenience, it will be up and running soon. 
+                    In the meanwhile, I invite you to explore my website😊❤
                 </DialogContentText>
 
             </DialogContent>
@@ -74,7 +63,6 @@ export default function CircleProject (props) {
             </DialogActions>
 
         </Dialog>
-
-    </div>
-  );
-  };
+        </div>
+    );
+};

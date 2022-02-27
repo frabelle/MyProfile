@@ -58,6 +58,16 @@
     border-radius: 5px;
 }
 
+.centerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #211940;
+    height: 100%;
+    width: 100%;
+    margin-bottom: -5000px;
+}
+
 .App-Paper {
     height: 30;
     text-align: 'center';

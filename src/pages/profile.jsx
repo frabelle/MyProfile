@@ -1,7 +1,9 @@
 import { Box, Grid, Container, Typography, Divider } from '@mui/material';
 import CardInfo from '../components/profile/cardinfo';
 import HelloWorld from '../image/feed/helloworld.png' 
-import MyPic from '../image/feed/mypic.png' 
+import MyPic from '../image/feed/mypic.png'
+import PicGif from '../image/feed/test.gif' 
+import PicGif2 from '../image/feed/test2.gif' 
 import Phrase from '../image/feed/phrase.png' 
 import CoderGirl from '../image/feed/codergirl.png'
 import Pics from '../image/feed/pic3.png'
@@ -16,7 +18,7 @@ const Profile = () => {
         },
         {
             name:"2",
-            pic:MyPic,
+            pic:PicGif,
         },
         {
             name:"3",
