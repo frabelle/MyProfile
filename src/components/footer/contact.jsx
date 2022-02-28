@@ -34,9 +34,9 @@ const ContactInfo = () => {
                 </Typography>
 
                 <Typography variant="body2">
-                        Let's talk! If you have some questions
-                        here are some ways where you can contact me. 
-                        Also, I'm open to recomendations 😊
+                        Let's talk! If you have some questions or want 
+                        to send me a recommendation, you can do it by 
+                        using this contact information 💜
                 </Typography>
 
                 <Stack textAlign="left" direction="row" spacing={3}>

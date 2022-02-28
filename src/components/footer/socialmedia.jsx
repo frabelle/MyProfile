@@ -32,7 +32,7 @@ const SocialMedia = () => {
 
             <Typography variant="body2">
                 If you want to know more about myself,
-                here are my social media accounts 
+                here are my social media accounts 😊
             </Typography>
 
             <Stack textAlign="left" direction="column" spacing={1.5}>

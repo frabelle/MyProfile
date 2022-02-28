@@ -65,8 +65,6 @@ export default function CircleProject (props) {
 
             </DialogContent>
 
-            
-
             <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
                 <Button size="medium" onClick={handleClose} autoFocus>
                     Close

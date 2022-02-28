@@ -11,28 +11,34 @@ const Profile = () => {
 
     const feed = [
         {
-            name:"1",
+            name:"Hello World",
             pic:HelloWorld,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         },
         {
-            name:"2",
+            name:"Start my journey",
             pic:PicGif,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         },
         {
-            name:"3",
+            name:"A nice phrase",
             pic:Phrase,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         },
         {
-            name:"4",
+            name:"<Coder Girl/>",
             pic:CoderGirl,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         },
         {
-            name:"5",
+            name:"Pics about mee",
             pic:Pics,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         },
         {
-            name:"6",
+            name:"What can i offer?",
             pic:MySkills,
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
         }
     ];
 
@@ -46,7 +52,7 @@ const Profile = () => {
                     {feed.map((data)=>(
                         <Grid item xs={12} md={4} lg={3.5} display="flex" 
                         alignItems="center" justifyContent="center">
-                            <CardInfo image={data.pic}/>
+                            <CardInfo name={data.name} image={data.pic} description={data.description} />
                         </Grid>
                     ))}
 

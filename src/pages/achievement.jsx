@@ -14,7 +14,7 @@ const Achievement = () => {
             </Typography>
 
             <Typography variant="body2" textAlign={'left'} color="primary.main">
-              Certifications, Awards, Education and Courses
+              Certifications, Honors, Awards and Education
             </Typography>
 
           </Box>

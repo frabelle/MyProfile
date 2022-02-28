@@ -6,7 +6,7 @@ import { Button } from '@mui/material';
 import Profile from '../image/portfolio/sample.jpg'
 import Profile2 from '../image/portfolio/sample.jpg'
 import RightArrow from '../image/utils/right-arrow.png'
-import { Swiper, SwiperSlide } from "swiper/react";
+//import { Swiper, SwiperSlide } from "swiper/react";
 
 
 const Test = () => {
@@ -50,7 +50,7 @@ const Test = () => {
     <div style={{marginInline: '20px', marginTop: '20px'}}>
 
       <div maxwidth="xl">
-        <Swiper slidesPerView={5.5}
+        {/* <Swiper slidesPerView={5.5}
           spaceBetween={8}
           loop={true}
           scrollbar={false}
@@ -78,7 +78,7 @@ const Test = () => {
               </SwiperSlide>
             ))}
           
-        </Swiper>
+        </Swiper> */}
       </div>
 
      

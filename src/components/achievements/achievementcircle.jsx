@@ -48,7 +48,7 @@ export default function CardAchievement (props) {
                 </CardContent>
 
                 <CardActions sx={{marginTop: -4, justifyContent: 'center', marginBottom: 1}}>
-                    <Button size="small" href="#">More information</Button>
+                    <Button size="small" href={props.url} target="_blank">See credential</Button>
                 </CardActions>
 
             </Card>

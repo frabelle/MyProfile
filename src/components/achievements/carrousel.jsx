@@ -15,49 +15,57 @@ const CarrouselAchievements = () => {
       name: "Salesforce Certified Administrator",
       image: License,
       type: "Certification",
-      date: "January, 2022"
+      date: "January, 2022",
+      url: "https://drive.google.com/file/d/1HRhHJ-3u6Ke3-lAewKO9nXQhkWvxaYu1/preview"
     },
     {
       name: "Introduction to Laravel Framework",
       image: Certificate,
-      type: "Diploma",
-      date: "January, 2022 - February, 2022"
+      type: "Certificate",
+      date: "January, 2022 - February, 2022",
+      url: "https://drive.google.com/file/d/14Sr3pToZy5FMyFQBSLf4XSyC2vFoKwN8/preview"
     },
     {
       name: "Module I Agile & Scrum Framework",
       image: Certificate,
-      type: "Diploma",
-      date: "January, 2022 - February, 2022"   
+      type: "Certificate",
+      date: "January, 2022 - February, 2022",
+      url: "https://drive.google.com/file/d/1dmf828NQlD3236RLSAlibHnIGzXLqcPG/preview"   
     },
     {
       name: "Excellence Academy 2020",
       image: Award,
       type: "Honors",
-      date: "November, 2021"
+      date: "November, 2021",
+      url: "https://drive.google.com/file/d/1LWiPYYmdSpTjbW3E8kDJlmJksuyR9HqG/preview"
     },
     {
       name: "Trailhead Bootcamp for New Admins",
       image: Certificate,
-      type: "Diploma",
-      date: "October, 2021 - November, 2021"
+      type: "Certificate",
+      date: "October, 2021 - November, 2021",
+      url: "https://drive.google.com/file/d/1Kn-bjMhr0RdIV3HdFK0fLTGOH5-msVKw/preview"
     },
     {
       name: "User Inteface Design with Adobe XD",
       image: Certificate,
-      type: "Diploma",
-      date: "July, 2021 - August, 2021"
+      type: "Certificate",
+      date: "July, 2021 - August, 2021",
+      url: "https://drive.google.com/file/d/1oeuIWOufeWKzEaHBVQaZ80_FuADjDFSp/preview"
     },
     {
       name: "Excellence Academy 2019",
       image: Award,
       type: "Honors",
-      date: "Octuber, 2020"
+      date: "Octuber, 2020",
+      url: "https://drive.google.com/file/d/1iY2iAuOmeivJBSAKY2IpfLbH-6IrI-EF/preview"
     },
     {
       name: "Intellectual Production Contest UCA",
       image: Trophy,
       type: "Award",
-      date: "May, 2020"
+      date: "May, 2020",
+      url: "https://drive.google.com/file/d/1yHJIhP4F8dayWslRMv8lrf188ZcYOcrA/preview"
     }
   ];
 
@@ -77,7 +85,7 @@ const CarrouselAchievements = () => {
 
         {cards.map((data) => (
           <Item name={data.name} image={data.image} type={data.type}
-            date={data.date}/>
+            date={data.date} url={data.url}/>
         ))}
 
       </Carousel>
