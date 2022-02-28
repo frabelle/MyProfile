@@ -1,4 +1,8 @@
-import * as React from 'react';
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+import {
+  Grid
+} from '@mui/material';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -12,28 +16,42 @@ import Button from '@mui/material/Button';
 import TranslateIcon from '@mui/icons-material/Translate';
 import MenuItem from '@mui/material/MenuItem';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
+import Logo from '../image/logo.svg'
+import DialogActions from '@mui/material/DialogActions';
 import DialogContentText from '@mui/material/DialogContentText';
 import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import Logo from '../image/logo.svg'
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import { ContactUs } from './email/contactform';
 
-const pages = ['Profile', 'Skills', 'Portfolio', 'Achievements', 'Contact me'];
+
+
+const pages = ['Profile', 'Skills', 'Portfolio', 'Achievements'];
 const settings = ['English', 'Spanish'];
 
 const ResponsiveAppBar = () => {
 
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const form = useRef();
+  var [open, setOpen] = React.useState(false);
+  const [openWIP, setOpenWIP] = React.useState(false);
+  var [openThanks, setOpenThanks] = React.useState(false);
+  var [openIssue, setOpenIssue] = React.useState(false);
 
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-      };
-    
-      const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-      };
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-      const [open, setOpen] = React.useState(false);
+    emailjs.sendForm('service_gxg49fr', 'template_qxrma8n', form.current, '')
+      .then((result) => {
+          console.log(result.text);
+          handleClose();
+          setOpenThanks(true);
+      }, (error) => {
+          console.log(error.text);
+          handleClose();
+          setOpenIssue(true);
+      });
+  };
 
       const handleClickOpen = () => {
         setOpen(true);
@@ -41,6 +59,22 @@ const ResponsiveAppBar = () => {
   
       const handleClose = () => {
         setOpen(false);
+      };
+
+      const handleClickOpenWIP = () => {
+        setOpenWIP(true);
+      };
+  
+      const handleCloseWIP = () => {
+        setOpenWIP(false);
+      };
+
+      const handleCloseThx = () => {
+        setOpenThanks(false);
+      };
+
+      const handleCloseIssue = () => {
+        setOpenIssue(false);
       };
 
   return (
@@ -103,46 +137,30 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
+            <Button
+              key={'Contact me'}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              onClick={handleClickOpen}
+            >
+                Contact me
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
 
             <Tooltip title="Change theme">
                 <IconButton style={{color:"#ffffff"}} size="small" variant="contained"
-                    onClick={handleClickOpen} sx={{ p: 0 }}>
+                    onClick={handleClickOpenWIP} sx={{ p: 0 }}>
                     <DarkModeIcon/>
                 </IconButton>
             </Tooltip>
         
             <Tooltip title="Translate">
               <IconButton style={{color:"#ffffff", marginLeft:"15px"}} size="small" variant="contained" 
-                onClick={handleClickOpen} sx={{ p: 0 }}>
+                onClick={handleClickOpenWIP} sx={{ p: 0 }}>
                     <TranslateIcon/>
               </IconButton>
             </Tooltip>
-
-            {/* <Menu
-              sx={{ mt: '45px' }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'right',
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
-            >
-              {settings.map((setting) => (
-                <MenuItem key={setting}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu> */}
 
           </Box>
 
@@ -150,8 +168,35 @@ const ResponsiveAppBar = () => {
       </Container>
 
       <Dialog
-            open={open}
-            onClose={handleClose}
+          open={open}
+          onClose={handleClose}
+          aria-labelledby="alert-dialog-title"
+          aria-describedby="alert-dialog-description">
+
+          <DialogContent>
+
+              <form ref={form} onSubmit={sendEmail}>
+
+                <ContactUs/>
+
+                  <Grid m={1} textAlign={'center'}>
+                      <Button
+                          variant='contained'
+                          type="submit"
+                      >
+                          Send message
+                      </Button>
+                  </Grid>
+
+              </form>
+
+          </DialogContent>
+
+      </Dialog>    
+
+       <Dialog
+            open={openWIP}
+            onClose={handleCloseWIP}
             aria-labelledby="alert-dialog-title"
             aria-describedby="alert-dialog-description"
         >
@@ -185,12 +230,113 @@ const ResponsiveAppBar = () => {
             
 
             <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
-                <Button size="medium" onClick={handleClose} autoFocus>
+                <Button size="medium" onClick={handleCloseWIP} autoFocus>
                     Close
                 </Button>
             </DialogActions>
 
-        </Dialog>
+        </Dialog>     
+
+      {/* Success Dialog */}
+        <Dialog
+            open={openThanks}
+            onClose={handleCloseThx}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+        >
+            {/* <DialogTitle style={{marginTop: '10px'}} id="alert-dialog-title">
+             {"FEATURE IN PROGRESS"}
+            </DialogTitle> */}
+
+            <DialogContent>
+
+                 <Box
+                    noValidate
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    m: 'auto',
+                    width: 'fit-content',
+                    marginTop: '5px'
+                    }}
+                >
+                    <CheckCircleIcon style={{fontSize: "50px", margin: "10px"}} color="success"/>
+
+                </Box>
+
+                <DialogContentText marginBottom="-10px">
+                    
+                    <Typography variant="h6" textAlign={'center'} mb={1}> 
+                      Thank you! Your message has been sent 😊
+                    </Typography>
+
+                    <Typography variant="subtitle" textAlign={'center'}> 
+                    I will be so happy to hear from you. In around of 
+                    48 hours maximum, I will reach you back in your email.
+                    </Typography>
+
+                </DialogContentText>
+
+            </DialogContent>
+
+            <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
+                <Button size="medium" onClick={handleCloseThx} autoFocus>
+                    Close
+                </Button>
+            </DialogActions>
+
+        </Dialog>    
+
+          {/* Error Dialog */}
+          <Dialog
+            open={openIssue}
+            onClose={handleCloseIssue}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            {/* <DialogTitle style={{marginTop: '10px'}} id="alert-dialog-title">
+             {"FEATURE IN PROGRESS"}
+            </DialogTitle> */}
+
+            <DialogContent>
+
+                 <Box
+                    noValidate
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    m: 'auto',
+                    width: 'fit-content',
+                    marginTop: '5px'
+                    }}
+                >
+                    <ErrorIcon style={{fontSize: "50px", margin: "10px"}} color="error"/>
+
+                </Box>
+
+                <DialogContentText marginBottom="-10px">
+                    
+                    <Typography variant="h6" textAlign={'center'} mb={1}> 
+                      Opps! Something bad happens 🤔
+                    </Typography>
+
+                    <Typography variant="subtitle" textAlign={'center'}> 
+                    It looks that your email could not be sent. Please try again or email
+                    me directly. Sorry for the inconvenience!
+                    </Typography>
+
+                </DialogContentText>
+
+            </DialogContent>
+
+            <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
+                <Button size="medium" onClick={handleCloseIssue} autoFocus>
+                    Close
+                </Button>
+            </DialogActions>
+
+        </Dialog>    
+
 
     </AppBar>
 

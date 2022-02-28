@@ -7,7 +7,7 @@ import Footer from './pages/footer';
 import Portfolio from './pages/portfolio';
 import Achievement from './pages/achievement';
 import Test from './components/test'
-
+import { ContactUs } from './components/email/contactform';
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';
