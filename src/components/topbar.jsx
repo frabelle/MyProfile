@@ -24,10 +24,9 @@ import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import ErrorIcon from '@mui/icons-material/Error';
 import { ContactUs } from './email/contactform';
+import CloseIcon from '@mui/icons-material/Close';
 
-
-
-const pages = ['Profile', 'Skills', 'Portfolio', 'Achievements'];
+const pages = ['Profile', 'Portfolio', 'Achievements'];
 const settings = ['English', 'Spanish'];
 
 const ResponsiveAppBar = () => {
@@ -41,16 +40,18 @@ const ResponsiveAppBar = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_gxg49fr', 'template_qxrma8n', form.current, '')
+    emailjs.sendForm('service_mraakal', 'template_qxrma8n', form.current, '-AhfPLgdRwc8maVKK')
       .then((result) => {
           console.log(result.text);
           handleClose();
           setOpenThanks(true);
-      }, (error) => {
-          console.log(error.text);
+          return;
+      })
+      .catch((error) =>{
           handleClose();
           setOpenIssue(true);
-      });
+          console.log(error.text);
+      })
   };
 
       const handleClickOpen = () => {
@@ -137,6 +138,16 @@ const ResponsiveAppBar = () => {
                 {page}
               </Button>
             ))}
+
+            <Button
+              key={'Contact me'}
+              sx={{ my: 2, color: 'white', display: 'block' }}
+              target="_blank"
+              href="https://drive.google.com/file/d/1jCg6dWLyDyHCvmooQ7PPD8bXyskz6zMq/preview"
+            >
+                Download Resume
+            </Button>
+
             <Button
               key={'Contact me'}
               sx={{ my: 2, color: 'white', display: 'block' }}
@@ -144,6 +155,7 @@ const ResponsiveAppBar = () => {
             >
                 Contact me
             </Button>
+
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
@@ -172,6 +184,19 @@ const ResponsiveAppBar = () => {
           onClose={handleClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description">
+
+            <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
 
           <DialogContent>
 

@@ -17,7 +17,10 @@ import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
 import DialogContentText from '@mui/material/DialogContentText';
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
+import CheckCircleIcon from '@mui/icons-material/CheckCircle';
+import ErrorIcon from '@mui/icons-material/Error';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 import { ContactUs } from '../email/contactform';
 
 const SocialItem = styled(Stack)(({ theme }) => ({
@@ -31,19 +34,35 @@ const SocialItem = styled(Stack)(({ theme }) => ({
 const ContactInfo = () => {
 
     const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs.sendForm('service_gxg49fr', 'template_qxrma8n', form.current, '-AhfPLgdRwc8maVKK')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-  };
-
     const [open, setOpen] = React.useState(false);
+    var [openThanks, setOpenThanks] = React.useState(false);
+    var [openIssue, setOpenIssue] = React.useState(false);
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_mraakal', 'template_qxrma8n', form.current, '-AhfPLgdRwc8maVKK')
+          .then((result) => {
+              console.log(result.text);
+              handleClose();
+              setOpenThanks(true);
+              return;
+          })
+          .catch((error) =>{
+              handleClose();
+              setOpenIssue(true);
+              console.log(error.text);
+          })
+    };
+
+    const handleCloseThx = () => {
+    setOpenThanks(false);
+    };
+
+    const handleCloseIssue = () => {
+    setOpenIssue(false);
+    };
+
 
     const handleClickOpen = () => {
       setOpen(true);
@@ -122,6 +141,20 @@ const ContactInfo = () => {
              {"FEATURE IN PROGRESS"}
             </DialogTitle> */}
 
+            
+<           IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
+
             <DialogContent>
 
                 <form ref={form} onSubmit={sendEmail}>
@@ -132,7 +165,6 @@ const ContactInfo = () => {
                         <Button
                             variant='contained'
                             type="submit"
-                            onClick={handleClose}
                         >
                             Send message
                         </Button>
@@ -142,39 +174,108 @@ const ContactInfo = () => {
 
             </DialogContent>
 
-            </Dialog>            
+            </Dialog>     
 
-<Dialog
-            open={open}
-            onClose={handleClose}
+              {/* Success Dialog */}
+        <Dialog
+            open={openThanks}
+            onClose={handleCloseThx}
             aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description">
-
+            aria-describedby="alert-dialog-description"
+        >
             {/* <DialogTitle style={{marginTop: '10px'}} id="alert-dialog-title">
              {"FEATURE IN PROGRESS"}
             </DialogTitle> */}
 
             <DialogContent>
 
-                <form ref={form} onSubmit={sendEmail}>
+                 <Box
+                    noValidate
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    m: 'auto',
+                    width: 'fit-content',
+                    marginTop: '5px'
+                    }}
+                >
+                    <CheckCircleIcon style={{fontSize: "50px", margin: "10px"}} color="success"/>
 
-                 <ContactUs/>
+                </Box>
 
-                    <Grid m={1} textAlign={'center'}>
-                        <Button
-                            variant='contained'
-                            type="submit"
-                            onClick={handleClose}
-                        >
-                            Send message
-                        </Button>
-                    </Grid>
+                <DialogContentText marginBottom="-10px">
+                    
+                    <Typography variant="h6" textAlign={'center'} mb={1}> 
+                      Thank you! Your message has been sent 😊
+                    </Typography>
 
-                </form>
+                    <Typography variant="subtitle" textAlign={'center'}> 
+                    I will be so happy to hear from you. In around of 
+                    48 hours maximum, I will reach you back in your email.
+                    </Typography>
+
+                </DialogContentText>
 
             </DialogContent>
 
-            </Dialog>    
+            <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
+                <Button size="medium" onClick={handleCloseThx} autoFocus>
+                    Close
+                </Button>
+            </DialogActions>
+
+        </Dialog>    
+
+          {/* Error Dialog */}
+          <Dialog
+            open={openIssue}
+            onClose={handleCloseIssue}
+            aria-labelledby="alert-dialog-title"
+            aria-describedby="alert-dialog-description"
+          >
+            {/* <DialogTitle style={{marginTop: '10px'}} id="alert-dialog-title">
+             {"FEATURE IN PROGRESS"}
+            </DialogTitle> */}
+
+            <DialogContent>
+
+                 <Box
+                    noValidate
+                    sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    m: 'auto',
+                    width: 'fit-content',
+                    marginTop: '5px'
+                    }}
+                >
+                    <ErrorIcon style={{fontSize: "50px", margin: "10px"}} color="error"/>
+
+                </Box>
+
+                <DialogContentText marginBottom="-10px">
+                    
+                    <Typography variant="h6" textAlign={'center'} mb={1}> 
+                      Opps! Something bad happens 🤔
+                    </Typography>
+
+                    <Typography variant="subtitle" textAlign={'center'}> 
+                    It looks that your email could not be sent. Please try again or email
+                    me directly. Sorry for the inconvenience!
+                    </Typography>
+
+                </DialogContentText>
+
+            </DialogContent>
+
+            <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
+                <Button size="medium" onClick={handleCloseIssue} autoFocus>
+                    Close
+                </Button>
+            </DialogActions>
+
+        </Dialog>         
+
         </div>
 
     );  

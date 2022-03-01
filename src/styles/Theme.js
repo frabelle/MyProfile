@@ -168,11 +168,12 @@ const theme = createTheme({
         secondary: {
             main: '#5c548a',
             light: '#FFFFFF',
-            dark: '#3832A0',
-            contrastText: '#0000000'
+            dark: '#9b87bc',
+            contrastText: '#FFFFFF'
         },
         other2: {
             main: '#b897c1',
+            dark: '#d9b3ca',
             contrastText: '#FFFFFF'
 
         },

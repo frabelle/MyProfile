@@ -1,68 +1,135 @@
 import * as React from 'react';
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogContent from '@mui/material/DialogContent';
+import CloseIcon from '@mui/icons-material/Close';
+import IconButton from '@mui/material/IconButton';
 
-export default function DialogProject(props) {
+import GitHubIcon from '@mui/icons-material/GitHub';
+import CloudCircleIcon from '@mui/icons-material/CloudCircle';
+import YouTubeIcon from '@mui/icons-material/YouTube';
 
-    const [open, setOpen] = React.useState(false);
+import { Typography, Grid, Chip, Stack, Link } from '@mui/material';
+import Test from '../../image/portfolio/sample2.png'
+import DialogCarouselProject from './dialogcarousel';
 
-      const handleClickOpen = () => {
-        setOpen(true);
-      };
-  
-      const handleClose = () => {
-        setOpen(false);
-      };
+export default function MaxWidthDialog() {
+    const cards = [
+        {
+          name: "Salesforce Certified Administrator",
+          image: Test,
+        },
+        {
+          name: "Salesforce Certified Administrator",
+          image: Test,
+        }
+    
+      
+      ];
 
-    return(
-        <div>
-            <Dialog
-            open={props.status}
-            onClose={handleClose}
-            aria-labelledby="alert-dialog-title"
-            aria-describedby="alert-dialog-description"
-        >
-            {/* <DialogTitle style={{marginTop: '10px'}} id="alert-dialog-title">
-             {"FEATURE IN PROGRESS"}
-            </DialogTitle> */}
+  const [open, setOpen] = React.useState(false);
 
-            <DialogContent>
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
 
-                 <Box
-                    noValidate
-                    sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    m: 'auto',
-                    width: 'fit-content',
-                    marginTop: '5px'
-                    }}
-                >
-                    <ReportProblemIcon style={{fontSize: "50px", margin: "10px"}} color="warning"/>
+  const handleClose = () => {
+    setOpen(false);
+  };
 
-                </Box>
+  return (
+    <React.Fragment>
 
-                <DialogContentText marginBottom="-10px">
-                    <strong>Feature in progress.</strong> Sorry for the inconvenience, it will be up and running soon. 
-                    In the meanwhile, I invite you to explore my website😊❤
-                </DialogContentText>
+      <Button variant="outlined" onClick={handleClickOpen}>
+        Open max-width dialog
+      </Button>
+      
+      <Dialog
+        fullWidth={true}
+        maxWidth={'lg'}
+        open={open}
+        onClose={handleClose}
+        scroll="body"
+      >
 
-            </DialogContent>
+            <IconButton
+              aria-label="close"
+              onClick={handleClose}
+              sx={{
+                position: 'absolute',
+                right: 8,
+                top: 8,
+                color: (theme) => theme.palette.grey[500],
+              }}
+            >
+              <CloseIcon />
+            </IconButton>
 
-            
+        <DialogContent>
+          <Box
+            noValidate
+            component="form"
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              m: 'auto',
+              width: 'fit-content',
+            }}
+          >
+                <Grid container rowSpacing={2} columnSpacing={{lg: 2}} margin={0} maxWidth={'lg'} 
+                  justifyContent={'center'} alignItems={'center'}>
 
-            <DialogActions style={{marginBottom: '10px', marginRight:'15px'}}>
-                <Button size="medium" onClick={handleClose} autoFocus>
-                    Close
-                </Button>
-            </DialogActions>
+                    <Grid item xs={12} md={12} lg={7}>
+                        <img
+                        src={Test}
+                        width='100%'
+                        alt="this is a image test"/>
+                            
+                    </Grid>
 
-        </Dialog>
-        </div>
-    );
-};
+                    <Grid item xs={12} md={12} lg={5} spacing={10} >
+                        <Typography variant="h5" fontSize={{lg: "32px"}}>
+                            Internship Management
+                        </Typography>
+
+                        <Typography variant="body2" py={1}>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus 
+                          ipsum sed metus auctor ornare. Fusce vehicula mauris a tortor laoreet, 
+                          sit amet aliquam turpis eleifend.Lorem ipsum dolor sit amet, consectetur 
+                          adipiscing elit. Suspendisse maximus ipsum sed metus auctor ornare.
+                        </Typography>
+
+                        <Typography variant="body2">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus 
+                          ipsum sed metus auctor ornare. Fusce vehicula mauris a tortor laoreet, 
+                          sit amet aliquam turpis eleifend.Lorem ipsum dolor sit amet, consectetur 
+                          adipiscing elit. Suspendisse maximus ipsum sed metus auctor ornare.
+                        </Typography>
+
+                        <Box>
+                          <Stack py={2} mt={1} direction="column" spacing={2}>
+                             <Button variant="contained" startIcon={<GitHubIcon />} size="small"
+                              href="https://github.com/frabelle" target={'_blank'}>
+                              See on Github
+                            </Button>
+                          </Stack>
+                        </Box>
+                        
+                    </Grid>
+
+                </Grid>
+
+          </Box>
+        </DialogContent>
+
+        {/* <DialogActions mt={'-10px'} >
+          <Button size="medium" onClick={handleClose}>
+            Close
+         </Button>
+        </DialogActions> */}
+
+      </Dialog>
+    </React.Fragment>
+  );
+}

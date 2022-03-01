@@ -11,9 +11,7 @@ import { styled } from '@mui/material/styles';
 const Item = styled(Chip)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(0.5),
-  textAlign: 'center',
-  backgroundColor:'#5c548a',
-  color: '#ffffff'
+  textAlign: 'center'
 }));
 
 const Contenedor = styled(Stack)(({ theme }) => ({
@@ -70,13 +68,13 @@ const Cover = () =>{
             }}>
 
                 <Contenedor direction={{xs: 'row'}} spacing={2}>
-                    <Item label="Jr. Software Developer"/>
-                    <Item label="UI/UX"/>
+                    <Item label="Jr. Software Developer" color="primary" clickable/>
+                    <Item label="UI/UX" color="secondary" clickable/>
                 </Contenedor>
 
                 <Contenedor direction={{xs: 'row'}} spacing={2}>
-                    <Item label="Systems Engineering"/>
-                    <Item label="Salesforce Administrator"/>
+                    <Item label="Systems Engineering" color="secondary" clickable/>
+                    <Item label="Salesforce Administrator" color="primary" clickable/>
                 </Contenedor>
 
             </Contenedor>

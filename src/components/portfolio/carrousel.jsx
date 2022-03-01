@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel } from '@trendyol-js/react-carousel';
 import Item from './projectcircle';
-import UniverseHero from '../../image/portfolio/Icons/UniverseHero.jpeg'
+import Videos from '../../image/portfolio/Icons/video.png'
 import RolyKermesse from '../../image/portfolio/Icons/RolyKermesse.jpg'
 import iCareAboutU from '../../image/portfolio/Icons/iCareAboutU.png'
 import AttentipRecipes from '../../image/portfolio/Icons/AttentipRecipes.png'
@@ -14,56 +14,97 @@ import GrandmaGarden from '../../image/portfolio/Icons/GrandmaGarden.png'
 import MyProfile from '../../image/portfolio/Icons/MyProfile.png'
 import RolyLab from '../../image/portfolio/Icons/RolyLab.png'
 
+import CloudCircleIcon from '@mui/icons-material/CloudCircle';
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import VolunteerActivismIcon from '@mui/icons-material/VolunteerActivism';
+
 const CarrouselPortfolio = () => {
 
   const cards = [
     {
       name: "Attentip Recipes",
-      image: AttentipRecipes
+      image: AttentipRecipes,
+      url:"https://github.com/frabelle/AttentipRecipes",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
-      name: "i Care About U",
-      image: iCareAboutU
+      name: "Attentip - i Care About U",
+      image: iCareAboutU,
+      url:"https://github.com/frabelle/Attentip_iCareAboutU",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "Pokedex",
-      image: Pokedex
+      image: Pokedex,
+      url:"https://github.com/frabelle/Pokedex",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "Michi App",
-      image: MichiApp
+      image: MichiApp,
+      url:"https://github.com/frabelle/MichiApp",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
+    },
+    {
+      name: "Videos Creation",
+      image: Videos,
+      url:"",
+      source: "Watch this on YouTube",
+      sourceIcon: <YouTubeIcon/>
     },
     {
       name: "Roly Kermesse",
-      image: RolyKermesse
+      image: RolyKermesse,
+      url:"https://github.com/frabelle/Rolykermesse",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "Mygro Kermesse",
-      image: MygroKermesse
+      image: MygroKermesse,
+      url:"https://github.com/frabelle/Mygrokermesse",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "Computecno Project",
-      image: CompuTecno
-    },
-    {
-      name: "Universe Hero",
-      image: UniverseHero
+      image: CompuTecno,
+      url:"https://github.com/frabelle/ComputecnoProject",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "RolyLab",
-      image: RolyLab
+      image: RolyLab,
+      url:"https://github.com/frabelle/RolyLab",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "Grandma's Garden",
-      image: GrandmaGarden
+      image: GrandmaGarden,
+      url:"",
+      source: "Let's check this closer",
+      sourceIcon: <CloudCircleIcon/>
     },
     {
       name: "Internships Management",
-      image: PPP
+      image: PPP,
+      url:"",
+      source: "See on Github",
+      sourceIcon: <GitHubIcon/>
     },
     {
       name: "My Profile",
-      image: MyProfile
+      image: MyProfile,
+      url:"",
+      source: "Thank you to get until here. Hope you liked my website!",
+      sourceIcon: <VolunteerActivismIcon/>
     }
   ];
 
@@ -73,7 +114,8 @@ const CarrouselPortfolio = () => {
       <Carousel show={6.5} swiping={true} slide={3} 
         leftArrow={false} rightArrow={false} responsive={true}>
         {cards.map((data) => (
-          <Item name={data.name} image={data.image}/>
+          <Item name={data.name} image={data.image} source={data.source} sourceIcon={data.sourceIcon}
+            url={data.url}/>
         ))}
       </Carousel>
 
