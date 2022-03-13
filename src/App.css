@@ -54,6 +54,12 @@
     border-radius: 100%;
 }
 
+.imgIconsTitle {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+}
+
 .rcorners1 {
     border-radius: 5px;
 }

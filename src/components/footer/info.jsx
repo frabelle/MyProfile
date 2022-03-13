@@ -25,11 +25,12 @@ const Info = () => {
                 />
 
                 <Typography variant="body2">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Quisque euismod auctor urna. Nam in molestie enim. Nunc in mi hendrerit, 
-                    malesuada erat sed, sagittis orci. Sed et mattis elit. Nulla nec fermentum elit, 
-                    at hendrerit massa. Sed at mi magna. Morbi justo tortor, dapibus nec ipsum non, 
-                    pellentesque dapibus sapien.
+                    <i>My Profile</i> main purpose is to show people what I am capable of 
+                    doing and know how has been my journey during my preparation 
+                    to become a professional in tech. Feel free to send me recomendations 
+                    for improving my website. I will be so happy to hear some feedback from you.
+                    *This website has been made from scratch, using the JavaScript library 
+                    for the user interface, React.
                 </Typography>
 
             </Stack>            

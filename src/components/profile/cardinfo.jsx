@@ -22,7 +22,7 @@ export default function CardInfo (props) {
     return(
         <div className='hover_color'>
             <Box elevation='12'
-                width={{xs:'400px',sm:'500px', md:'300px' ,lg:'350px'}}
+                width={{xs:'400px',sm:'500px', md:'300px' ,lg:'350px', xl:'500px'}}
                 sx={{
                     borderRadius: '10px',
                 }}>
@@ -41,7 +41,7 @@ export default function CardInfo (props) {
                             {props.name}
                         </Typography>
 
-                        <Typography variant='body' color="primary.contrastText">
+                        <Typography variant='body1' color="primary.contrastText">
                             {props.description}
                         </Typography>
 

@@ -75,7 +75,7 @@ const CarrouselAchievements = () => {
     { width: 850, itemsToShow: 3},
     { width: 1150, itemsToShow: 3.5},
     { width: 1450, itemsToShow: 4.5 },
-    { width: 1750, itemsToShow: 5.5 },
+    { width: 1750, itemsToShow: 4.5 },
   ]
 
   return(

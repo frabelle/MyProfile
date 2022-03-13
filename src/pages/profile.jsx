@@ -1,4 +1,4 @@
-import { Grid, Container} from '@mui/material';
+import { Grid, Container, Stack} from '@mui/material';
 import CardInfo from '../components/profile/cardinfo';
 import HelloWorld from '../image/feed/helloworld.png' 
 import PicGif from '../image/feed/test.gif' 
@@ -11,34 +11,34 @@ const Profile = () => {
 
     const feed = [
         {
-            name:"Hello World",
+            name:"Hello World 🌎",
             pic:HelloWorld,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"I am Renchi Meléndez, 21 years old. I was born in the city of San Pedro Sula, Honduras. I am half Honduran and half Filipina. I'm currently living in Managua, Nicaragua, where I find myself studying an engineering degree at Universidad Centroamericana (UCA)."
         },
         {
-            name:"Start my journey",
+            name:"Information Systems Engineering Student 👩🏽‍💻",
             pic:PicGif,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"I am graduating in the first semester of 2023. I have been a scholarship student since my first semester at Universidad Centroamericana, where I'm also part of the students with academic excellence. UCA is a prestigious Jesuit university located in the capital of Nicaragua."
         },
         {
-            name:"A nice phrase",
+            name:"How i started in Tech 🚀",
             pic:Phrase,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"When I started my career I did not have the notions or knowledge about programming or related topics in technology. However, as I progressed I began to look for ways and alternatives to continue improving and learning on this path. My inspiration to focus on this field was when I created my first application in C/C++."
         },
         {
-            name:"<Coder Girl/>",
+            name:"<Coder Girl🤍/>",
             pic:CoderGirl,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         {
-            name:"Pics about mee",
+            name:"What i like to do ✨",
             pic:Pics,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         },
         {
-            name:"What can i offer?",
+            name:"Skills and abilities 📊",
             pic:MySkills,
-            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel tincidunt sem. Duis vestibulum eros in diam tincidunt pharetra. Aliquam erat volutpat. Maecenas venenatis lobortis nunc, eget consectetur mauris maximus sed. Etiam sem sapien, mollis quis dictum et, porta auctor libero. Nulla nec rutrum augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse hendrerit nulla ac nibh pellentesque convallis. Maecenas ullamcorper volutpat mauris sed rhoncus."
+            description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
         }
     ];
 
@@ -46,7 +46,7 @@ const Profile = () => {
 
         <Container maxWidth="xl" sx={{ py:5 }} > 
 
-            <Grid container spacing={{lg:'15', md:'15', xs:'20'}} 
+            <Grid container spacing={{xl:'30',lg:'15', md:'15', xs:'20'}} 
                 alignItems="center" justifyContent="center" direction="row">
 
                     {feed.map((data)=>(

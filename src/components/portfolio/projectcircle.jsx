@@ -1,20 +1,12 @@
 import React from 'react';
-import { Box, Typography, Chip, Stack, Grid } from '@mui/material';
+import { Box, Typography, Stack, Grid } from '@mui/material';
 import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
 import Button from '@mui/material/Button';
 import DialogProject from '../portfolio/projectdialog'
-import Test from '../../image/portfolio/sample2.png'
+import Test from '../../image/portfolio/sample.jpg'
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
-
-import CloudCircleIcon from '@mui/icons-material/CloudCircle';
-import YouTubeIcon from '@mui/icons-material/YouTube';
-import GitHubIcon from '@mui/icons-material/GitHub';
-
 export default function CircleProject (props) {
 
     const [open, setOpen] = React.useState(false);
@@ -30,16 +22,13 @@ export default function CircleProject (props) {
 
   return(
       <div>
-        <div style={{textAlign: 'center', marginInline: '0px'}}>
+        <div style={{textAlign: 'center', marginInline: '0px'}} >
             <img
                     className="imgIcons"
                     src={props.image}
                     alt="imagen de prueba"
                     onClick={handleClickOpen}
                 />
-        {/* <Typography variant="overline" display="block" xs={{fontSize:'0px'}} gutterBottom>
-            {props.name}
-        </Typography> */}
         </div>
 
         <Dialog
@@ -77,31 +66,24 @@ export default function CircleProject (props) {
                     <Grid container rowSpacing={2} columnSpacing={{lg: 2}} margin={0} maxWidth={'lg'} 
                     justifyContent={'center'} alignItems={'center'}>
 
-                        <Grid item xs={12} md={12} lg={7}>
-                            <img
-                            src={Test}
-                            width='100%'
-                            alt="this is a image test"/>
+                        <Grid item xs={12} md={12} lg={8}>
+
+                            {props.sample}
                                 
                         </Grid>
 
-                        <Grid item xs={12} md={12} lg={5} spacing={10} >
-                            <Typography variant="h5" fontSize={{lg: "32px"}}>
+                        <Grid item xs={12} md={12} lg={4} spacing={10} >
+
+                            <Typography textAlign={'center'} variant="h4" mb={1}>
                                 {props.name}
                             </Typography>
 
-                            <Typography variant="body2" py={1}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus 
-                            ipsum sed metus auctor ornare. Fusce vehicula mauris a tortor laoreet, 
-                            sit amet aliquam turpis eleifend.Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Suspendisse maximus ipsum sed metus auctor ornare.
+                            <Typography variant="body2" py={1} textAlign="justify">
+                                {props.description1}
                             </Typography>
 
-                            <Typography variant="body2">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse maximus 
-                            ipsum sed metus auctor ornare. Fusce vehicula mauris a tortor laoreet, 
-                            sit amet aliquam turpis eleifend.Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit. Suspendisse maximus ipsum sed metus auctor ornare.
+                            <Typography variant="body2" textAlign="justify">
+                                {props.description2}
                             </Typography>
 
                             <Box>
@@ -118,6 +100,7 @@ export default function CircleProject (props) {
                     </Grid>
 
             </Box>
+
             </DialogContent>
 
             {/* <DialogActions mt={'-10px'} >
