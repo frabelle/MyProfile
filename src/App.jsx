@@ -1,3 +1,4 @@
+import './App.css'
 import MuithemeProvider from '@mui/material/styles/ThemeProvider';
 import theme from './styles/Theme'
 import TopBar from './components/topbar'
