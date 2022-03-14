@@ -1,21 +1,10 @@
 import React from 'react'
-import Dialog from '@mui/material/Dialog';
-import DialogActions from '@mui/material/DialogActions';
-import DialogContent from '@mui/material/DialogContent';
-import DialogContentText from '@mui/material/DialogContentText';
-import ReportProblemIcon from '@mui/icons-material/ReportProblem';
-import TestImage from '../../image/feed/mypic.png'
 import {
     Box,
-    Button,
-    Grid,
-    Card,
-    CardContent,
-    CardHeader,
-    Divider,
     Typography
   } from '@mui/material';
-import { height } from '@mui/system';
+import "../../App.css"
+
 
 export default function CardInfo (props) {
 

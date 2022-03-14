@@ -88,8 +88,6 @@
     position: relative;
     margin: 0;
     display: inline-block;
-    background: #5C548A;
-    border-radius: 10px;
 }
 
 .hover_color::before {
@@ -99,7 +97,7 @@
     top: 100%;
     right: 0;
     bottom: 0;
-    background: #5C548A;
+    background-color: #5C548A;
     opacity: 90%;
     transition: all 350ms;
     border-radius: 10px;
@@ -120,7 +118,6 @@
     height: 100%;
     /*alternate solution for that stupid space at the bottom*/
     margin-bottom: -3px;
-    background: #5C548A;
     /*  if the title is always there and you need to darken the background:
    filter: brightness(40%); */
 }
@@ -152,7 +149,6 @@
     bottom: 0;
     right: 0;
     z-index: 1;
-    background: #5C548A;
 }
 
 

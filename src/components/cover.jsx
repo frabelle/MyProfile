@@ -1,10 +1,8 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Container, Typography, Chip, Stack } from '@mui/material';
-import Paper from '@mui/material/Paper';
+import { Typography, Chip, Stack } from '@mui/material';
 import Waves from '../image/layered-waves.svg'
 import Profile from '../image/profile.jpeg'
-import Logo from '../image/logo.svg'
 import "../App.css"
 import { styled } from '@mui/material/styles';
 
