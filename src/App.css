@@ -88,6 +88,8 @@
     position: relative;
     margin: 0;
     display: inline-block;
+    background: #5C548A;
+    border-radius: 10px;
 }
 
 .hover_color::before {
