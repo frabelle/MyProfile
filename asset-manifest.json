@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/MyProfile/static/css/main.8c96f9fd.chunk.css",
+    "main.css": "/MyProfile/static/css/main.63110f9e.chunk.css",
     "main.js": "/MyProfile/static/js/main.59d1567f.chunk.js",
     "main.js.map": "/MyProfile/static/js/main.59d1567f.chunk.js.map",
     "runtime-main.js": "/MyProfile/static/js/runtime-main.ae208bfa.js",
@@ -10,7 +10,7 @@
     "static/js/3.b08fa172.chunk.js": "/MyProfile/static/js/3.b08fa172.chunk.js",
     "static/js/3.b08fa172.chunk.js.map": "/MyProfile/static/js/3.b08fa172.chunk.js.map",
     "index.html": "/MyProfile/index.html",
-    "static/css/main.8c96f9fd.chunk.css.map": "/MyProfile/static/css/main.8c96f9fd.chunk.css.map",
+    "static/css/main.63110f9e.chunk.css.map": "/MyProfile/static/css/main.63110f9e.chunk.css.map",
     "static/js/2.62804a8c.chunk.js.LICENSE.txt": "/MyProfile/static/js/2.62804a8c.chunk.js.LICENSE.txt",
     "static/media/AttentipRecipes.3c21d61e.gif": "/MyProfile/static/media/AttentipRecipes.3c21d61e.gif",
     "static/media/AttentipRecipes.d5686c97.png": "/MyProfile/static/media/AttentipRecipes.d5686c97.png",
@@ -56,7 +56,7 @@
   "entrypoints": [
     "static/js/runtime-main.ae208bfa.js",
     "static/js/2.62804a8c.chunk.js",
-    "static/css/main.8c96f9fd.chunk.css",
+    "static/css/main.63110f9e.chunk.css",
     "static/js/main.59d1567f.chunk.js"
   ]
 }
