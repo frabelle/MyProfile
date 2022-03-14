@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { Typography, Chip, Stack } from '@mui/material';
+import { Typography, Chip, Stack, Avatar } from '@mui/material';
 import Waves from '../image/layered-waves.svg'
 import Profile from '../image/profile.jpeg'
 import "../App.css"
@@ -39,7 +39,7 @@ const Cover = () =>{
                     
             </Box>
 
-            <Box textAlign="center" marginTop="-11%">
+            <Box textAlign="center" marginTop="-11%"> 
                 <img
                     className="imgCircle"
                     src={Profile}
