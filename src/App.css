@@ -120,6 +120,7 @@
     height: 100%;
     /*alternate solution for that stupid space at the bottom*/
     margin-bottom: -3px;
+    background: #5C548A;
     /*  if the title is always there and you need to darken the background:
    filter: brightness(40%); */
 }
@@ -151,6 +152,7 @@
     bottom: 0;
     right: 0;
     z-index: 1;
+    background: #5C548A;
 }
 
 
