@@ -91,14 +91,13 @@
 }
 
 .hover_color::before {
-    background-color: rgba(92, 84, 138, 1) !important;
     position: absolute;
     content: '';
     left: 0;
     top: 100%;
     right: 0;
     bottom: 0;
-    opacity: 90%;
+    background-color: rgba(92, 84, 138, 0.9) !important;
     transition: all 350ms;
     border-radius: 10px;
     /*this. this is stupid. to get rid of that empty space. I don't know what causes it*/
