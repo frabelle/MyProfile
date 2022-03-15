@@ -11,7 +11,7 @@ export default function CardInfo (props) {
     return(
         <div className='hover_color'>
             <Box elevation='12'
-                width={{xs:'400px',sm:'500px', md:'300px' ,lg:'350px', xl:'500px'}}
+                width={{xs:'350px',sm:'500px', md:'300px' ,lg:'350px', xl:'500px'}}
                 sx={{
                     borderRadius: '10px',
                 }}>
