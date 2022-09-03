@@ -7,8 +7,6 @@ import Profile from './pages/profile';
 import Footer from './pages/footer';
 import Portfolio from './pages/portfolio';
 import Achievement from './pages/achievement';
-import Test from './components/test'
-import DialogTest from './components/portfolio/projectdialog'
 import useScrollTrigger from '@mui/material/useScrollTrigger';
 import Box from '@mui/material/Box';
 import Fab from '@mui/material/Fab';

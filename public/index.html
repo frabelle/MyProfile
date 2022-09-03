@@ -6,8 +6,9 @@
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
+    <meta name="description" content="Hi, I'm Renchi Meléndez" />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link itemprop="image" href="%PUBLIC_URL%/image.png" />
 
     <!-- Swiper CDN -->
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
@@ -26,7 +27,24 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+
+    <!-- Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-199353225-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-199353225-1');
+    </script>
+
     <title>Renchi's Profile</title>
+
 </head>
 
 <body style="background-color: #F2F2F2;">
