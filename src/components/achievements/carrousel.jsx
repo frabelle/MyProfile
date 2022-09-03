@@ -1,6 +1,5 @@
 import React from 'react';
 import { Box} from '@mui/material';
-//import { Carousel } from '@trendyol-js/react-carousel';
 import Carousel from 'react-elastic-carousel';
 import Item from './achievementcircle';
 import Award from '../../image/achievements/awards.png'
@@ -12,11 +11,25 @@ const CarrouselAchievements = () => {
 
   const cards = [
     {
+      name: "Salesforce Certified Platform App Builder",
+      image: License,
+      type: "Certification",
+      date: "August, 2022",
+      url: "https://drive.google.com/file/d/1NefXn5aIUhX5bWTes-2X5FgAhLZ5XuNT/preview"
+    },
+    {
       name: "Salesforce Certified Administrator",
       image: License,
       type: "Certification",
       date: "January, 2022",
       url: "https://drive.google.com/file/d/1HRhHJ-3u6Ke3-lAewKO9nXQhkWvxaYu1/preview"
+    },
+    {
+      name: "Workshop: Introduction to Power BI",
+      image: Certificate,
+      type: "Certificate",
+      date: "July, 2022 - August, 2022",
+      url: "https://drive.google.com/file/d/1CKYDdskGUhkHFycJI1GVCDRxbHqwTusF/preview"
     },
     {
       name: "Introduction to Laravel Framework",
