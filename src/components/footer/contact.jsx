@@ -107,12 +107,12 @@ const ContactInfo = () => {
                             <Typography variant="body2">Mateare, Managua. Nicaragua</Typography>
                         </SocialItem> */}
 
-                        <Link underline='none' href='https://api.whatsapp.com/send?phone=+50558289007' target={'_blank'}>
+                        {/* <Link underline='none' href='https://api.whatsapp.com/send?phone=+50558289007' target={'_blank'}>
                             <SocialItem direction="row" spacing={1}>
                                 <PhoneIcon fontSize="medium" color="primary"/>
                                 <Typography variant="body2">+505 5828-9007</Typography>
                             </SocialItem>
-                        </Link>
+                        </Link> */}
 
                         <Link underline='none' href="mailto: renchifrabelle@gmail.com">
                             <SocialItem direction="row" spacing={1}>

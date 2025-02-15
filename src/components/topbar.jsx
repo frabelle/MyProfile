@@ -139,14 +139,14 @@ const ResponsiveAppBar = () => {
               </Button>
             ))}
 
-            <Button
+            {/* <Button
               key={'Contact me'}
               sx={{ my: 2, color: 'white', display: 'block' }}
               target="_blank"
               href="https://drive.google.com/file/d/1jCg6dWLyDyHCvmooQ7PPD8bXyskz6zMq/preview"
             >
                 Download Resume
-            </Button>
+            </Button> */}
 
             <Button
               key={'Contact me'}

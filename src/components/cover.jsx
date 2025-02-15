@@ -66,7 +66,7 @@ const Cover = () =>{
             }}>
 
                 <Contenedor direction={{xs: 'row'}} spacing={2}>
-                    <Item label="Jr. Software Developer" color="secondary" clickable/>
+                    <Item label="Software Developer" color="secondary" clickable/>
                     <Item label="UI/UX" color="secondary" clickable/>
                 </Contenedor>
 

@@ -24,7 +24,7 @@ const Copyright = () => {
                 alignItems: 'center'
             }}>
                 <Typography variant="body2" color="#f5f5f5">
-                    Copyright © 2022 My Profile by Renchi Meléndez
+                    Copyright © 2025 My Profile by Renchi Meléndez
                 </Typography>
             </Box>
 

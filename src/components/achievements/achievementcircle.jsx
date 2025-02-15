@@ -8,7 +8,7 @@ export default function CardAchievement (props) {
       <div>
         <div style={{textAlign: 'center', marginInline: '20px'}}>
             
-            <Card variant="outlined" sx={{ maxWidth: 345 }} onClick="href">
+            <Card variant="outlined" sx={{ maxWidth: 345 }}>
 
             <CardContent>
 

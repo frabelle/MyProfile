@@ -5,6 +5,12 @@ import Item from './projectcircle';
 import Videos from '../../image/portfolio/Icons/video.png'
 import VideoSample from '../../image/portfolio/samples/VideoSample.gif'
 
+import SistemaAdmision from '../../image/portfolio/Icons/SistemaAdmision.png'
+import SistemaAdmisionSample from '../../image/portfolio/samples/SistemaAdmisionSample.png'
+
+import PurrfectHaven from '../../image/portfolio/Icons/PurrfectHaven.png'
+import PurrfectHavenSample from '../../image/portfolio/samples/PurrfectHavenSample.png'
+
 import RolyKermesse from '../../image/portfolio/Icons/RolyKermesse.jpg'
 import RolyKermesseSample from '../../image/portfolio/samples/RolyKermesse.gif'
 
@@ -35,8 +41,6 @@ import GrandmaGardenSample from '../../image/portfolio/samples/GrandmaGarden.gif
 import MyProfile from '../../image/portfolio/Icons/MyProfile.png'
 import MyProfileSample from '../../image/portfolio/samples/MyProfileSample.gif'
 
-import RolyLab from '../../image/portfolio/Icons/RolyLab.png'
-
 import CloudCircleIcon from '@mui/icons-material/CloudCircle';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -46,74 +50,94 @@ const CarrouselPortfolio = () => {
 
   const cards = [
     {
+      name: "🐱 Purrfect Haven",
+      image: PurrfectHaven,
+      url: "https://purrfecthaven-dev-ed.develop.my.site.com/s/",
+      source: "Visit the site",
+      sourceIcon: <CloudCircleIcon/>,
+      description1: "Project developed as part of a workshop I led for the community about Salesforce. In this session, I guided participants in building a portal using Experience Cloud, where users could adopt kittens or request information through Screen Flows.",
+      description2: "Some key features include: automation with Flows, managing potential adopters in Sales Cloud, and setting up interactive forms in Experience Cloud.",
+      sample: <img src={PurrfectHavenSample} width='100%' alt="PurrfectHavenSample"/>,
+    },
+    {
+      name: "🎓 Student Admission System",
+      image: SistemaAdmision,
+      url: "https://uli4-dev-ed.develop.my.site.com/",
+      source: "Visit the site",
+      sourceIcon: <CloudCircleIcon/>,
+      description1: "Project developed for my thesis, where I designed a self-service portal to manage student admissions at an academic institution. Implemented using Salesforce Experience Cloud and Education Architecture (EDA), this system allows students to submit enrollment forms online and receive automated responses.",
+      description2: "Some key features include: integration with Salesforce Flows to automate data collection, digitization of the admission process, and centralized information management in Sales Cloud.",
+      sample: <img src={SistemaAdmisionSample} width='100%' alt="SistemaAdmisionSample"/>,
+    },
+    {
       name: "🥗 Attentip Recipes",
       image: AttentipRecipes,
-      url:"https://github.com/frabelle/AttentipRecipes",
+      url: "https://github.com/frabelle/AttentipRecipes",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: "Es una aplicación móvil en el que puedes descubrir increibles recetas y conocer más sobre el tipo de cocina que prevalece en algunos países del mundo. Este aplicativo ha sido desarrollado con Kotlin y se usó el servicio de spoonacular.com/food-api para la recopilación de la información que se muestra.",
-      description2: "Some features in this app are: SQLite local database, Dependency injection, Repository factory, Singleton, APIs Rest, Architectural pattern MVVM/MVI, Offline connection, Uniflow, Fragments, Navigation Graph.",
-      sample: <img src={AttentipRecipesSample} width='100%' alt="this is an image"/>,
+      description1: "A mobile application where you can discover amazing recipes and learn more about the predominant cuisines of different countries worldwide. This app was developed using Kotlin and leverages the spoonacular.com/food-api service to gather and display food-related information.",
+      description2: "Some features in this app include: SQLite local database, Dependency Injection, Repository Factory, Singleton, REST APIs, MVVM/MVI Architectural Pattern, Offline Connection, Uniflow, Fragments, and Navigation Graph.",
+      sample: <img src={AttentipRecipesSample} width='100%' alt="AttentipRecipesSample"/>,
     },
     {
       name: "🏋️‍♀ i Care About U",
       image: iCareAboutU,
-      url:"https://github.com/frabelle/Attentip_iCareAboutU",
+      url: "https://github.com/frabelle/Attentip_iCareAboutU",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Es una aplicación para dispositivos android que muestra ejercicios para realizar en una pausa activa, estos se clasifican en ejercicios fisicos y en ejercicios mentales. Este fue un proyecto desarrollado en grupo para la entrega de un proyecto final en la universidad. Fue desarrollado con Java.',
-      description2: 'Some features in this app are: Fragments, Material Design, Shared Preferences, Topbar & Bottombar, Glide.',
-      sample: <img src={iCareAboutUSample} width='100%' alt="this is an image"/>,
+      description1: "An Android application that provides exercises for active breaks, categorized into physical and mental activities. This was a group project developed as a final university assignment. The app was built using Java.",
+      description2: "Some features in this app include: Fragments, Material Design, Shared Preferences, Topbar & Bottombar, Glide.",
+      sample: <img src={iCareAboutUSample} width='100%' alt="iCareAboutUSample"/>,
     },
     {
       name: "🕹 Pokedex",
       image: Pokedex,
-      url:"https://github.com/frabelle/Pokedex",
+      url: "https://github.com/frabelle/Pokedex",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Es un aplicativo móvil para dispositivos Android inspirada en Pokémon. Esta aplicación muestra la información de 10 pokemones previamente definidos. El propósito principal de este trabajo fue en aprender la forma en la que trabajan los Fragments y los Dialog Fragments. Al seleccionar un pokemón, se muestra una ventana con información más detallada sobre este. Fue desarrollado con Java.',
-      description2: 'Some features in this app are: Fragments, Material Design, Shared Preferences, Topbar, Dialog Fragment, Recycle view.',
-      sample: <img src={PokedexSample} width='100%' alt="this is an image"/>
+      description1: "A mobile application for Android inspired by Pokémon. This app displays information about 10 predefined Pokémon. The main objective of this project was to learn how Fragments and Dialog Fragments work. When selecting a Pokémon, a window opens with more detailed information about it. Developed using Java.",
+      description2: "Some features in this app include: Fragments, Material Design, Shared Preferences, Topbar, Dialog Fragment, and RecyclerView.",
+      sample: <img src={PokedexSample} width='100%' alt="PokedexSample"/>
     },
     {
       name: "😺 Michi App",
       image: MichiApp,
-      url:"https://github.com/frabelle/MichiApp",
+      url: "https://github.com/frabelle/MichiApp",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Esta es una de mis aplicaciones favoritas, es un aplicativo para dispositivos móviles en el que se muestra información de todas las razas de gatos que existen. Al dar clic en uno de los cards se muestra información más detallada sobre la raza y a su vez contiene un hipervínculo que lo redirecciona a un sitio web en donde se puede encontrar la información completa.',
-      description2: 'Se desarrolló con el lenguaje de programación Kotlin y se utilizó el servicio de docs.thecatapi.com para el consumo de la información que se muestra. Algunas de las caracteristicas son: SQLite Local DB, Singleton, MVVM/MVI, Offline connection, Uniflow, Dialog Fragment.',
-      sample: <img src={MichiAppSample} width='100%' alt="this is an image"/>
+      description1: "One of my favorite applications! A mobile app that provides information about all existing cat breeds. By clicking on a card, users can view detailed breed information, along with a hyperlink redirecting them to an external site for more comprehensive details.",
+      description2: "Developed using Kotlin and powered by docs.thecatapi.com. Some features include: SQLite Local DB, Singleton, MVVM/MVI, Offline Connection, Uniflow, and Dialog Fragment.",
+      sample: <img src={MichiAppSample} width='100%' alt="MichiAppSample"/>
     },
     {
       name: "📹 COVID Video Contest",
       image: Videos,
-      url:"https://youtu.be/nD-2Y1_wOQo",
+      url: "https://youtu.be/nD-2Y1_wOQo",
       source: "Watch my video on YouTube",
       sourceIcon: <YouTubeIcon/>,
-      description1: 'La Universidad Centroamericana realizó un concurso en donde los estudiantes de distintas carreras pudieran compartir sus ideas de posibles soluciones que podrían dar para las circunstancias que hemos venido viviendo en esta pandemia. Tomé la valentía de participar, a pesar de que no soy ninguna experta, ni mucho menos estudiada en lo que respecta sobre la edición de videos, sin embargo, me gusta mucho y lo veo más como un pasatiempo para mí.',
-      description2: 'Me llevé la grata sorpresa de haber obtenido el primer lugar en este concurso. En un comienzo nunca creí que lo que miraba como un pasatiempo, llegase a ser realmente buena en ello.',
-      sample: <img src={VideoSample} width='100%' alt="this is an image"/>
+      description1: "Universidad Centroamericana organized a contest where students from various fields could share their ideas for possible solutions to the challenges brought by the pandemic. I took the courage to participate, even though I am not an expert in video editing. However, I truly enjoy it and see it more as a hobby.",
+      description2: "To my surprise, I won **first place** in this competition. At first, I never imagined that something I considered a hobby could turn into something I was actually good at.",
+      sample: <img src={VideoSample} width='100%' alt="VideoSample"/>
     },
     {
       name: "⛪ Roly Kermesse",
       image: RolyKermesse,
-      url:"https://github.com/frabelle/Rolykermesse",
+      url: "https://github.com/frabelle/Rolykermesse",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Esta es una parte de un proyecto elaborado para una asignatura en donde se facilita la gestión de una kermesse. Este proyecto tiene implementado el módulo de Arqueo de Caja dentro de este se encuentra la gestión de Arqueo de caja, Monedas, Denominaciones y Tasas de cambio.',
-      description2: 'En este aplicativo web se utilizó el lenguaje de programación PHP como backend y para el frontend se utilizó la biblioteca de Bootstrap. Algunas de las implementaciones en este proyecto fue la arquitectura MVC, JAlert, Select2, AJAX, Fontawesome.',
-      sample: <img src={RolyKermesseSample} width='100%' alt="this is an image"/>
+      description1: "This project is part of a university assignment aimed at facilitating the management of a kermesse event. It includes a Cash Register module, which allows for tracking cash audits, currency management, denominations, and exchange rates.",
+      description2: "This web application was developed using PHP for the backend and Bootstrap for the frontend. Some of its implementations include MVC architecture, JAlert, Select2, AJAX, and FontAwesome.",
+      sample: <img src={RolyKermesseSample} width='100%' alt="RolyKermesseSample"/>
     },
     {
       name: "⛪ Mygro Kermesse",
       image: MygroKermesse,
-      url:"https://github.com/frabelle/Mygrokermesse",
+      url: "https://github.com/frabelle/Mygrokermesse",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Esta es una parte de un proyecto elaborado para una asignatura en donde se facilita la gestión de una kermesse. Este proyecto tiene implementado el módulo de Arqueo de Caja dentro de este se encuentra la gestión de Arqueo de caja, Monedas, Denominaciones y Tasas de cambio. También tiene una sección en el que se generan informes de ciertos módulos y la auditoria de las actividades e ingresos por kermesse.',
-      description2: 'Este aplicativo web fue desarrollo con el lenguaje de programación C#, utilizando el framework .NET, para el desarrollo del frontend se utilizó la biblioteca de Bootstrap 5 y Report Builder para la creación y generación de los informes.',
-      sample:  <img src={MygroKermesseSample} width='100%' alt="this is an image"/>
+      description1: "This project is part of a university assignment designed to facilitate the management of a kermesse event. It includes a Cash Register module that enables the management of cash audits, currencies, denominations, and exchange rates. Additionally, it features a section for generating reports on specific modules and auditing kermesse activities and revenues.",
+      description2: "This web application was developed using C# with the .NET framework. The frontend was built using Bootstrap 5, and Report Builder was used for report creation and generation.",
+      sample: <img src={MygroKermesseSample} width='100%' alt="MygroKermesseSample"/>
     },
     {
       name: "💻 Computecno Project",
@@ -123,38 +147,38 @@ const CarrouselPortfolio = () => {
       sourceIcon: <GitHubIcon/>,
       description1: 'Este fue uno de los primeros proyectos que realicé cuando recién estaba aprendiendo sobre la programación. Es un sistema de consola desarrollado en C++ para el gestionamiento de una empresa ficticia que contiene Clientes, Ventas y Productos. La información de cada gestionamiento es guardada en archivos.',
       description2: 'Algunas de las caracteristicas de este software es el inicio de sesión, gestionar clientes, realizar ventas a partir de los clientes y productos que se encuentren en el sistema y la generación de informes para cada módulo.',
-      sample: <img src={CompuTecnoSample} width='100%' alt="this is an image"/>,
+      sample: <img src={CompuTecnoSample} width='100%' alt="CompuTecnoSample"/>,
     },
     {
       name: "🌱 Grandma's Garden",
       image: GrandmaGarden,
-      url:"https://drive.google.com/file/d/1MAC7-KWijB1P_8XamzFqUBdSKSufbm2b/preview",
+      url: "https://drive.google.com/file/d/1MAC7-KWijB1P_8XamzFqUBdSKSufbm2b/preview",
       source: "Let's check this closer",
       sourceIcon: <CloudCircleIcon/>,
-      description1: 'Este fue un diseño inspirado en mi abuela, es por ello el nombre y también por el diseño de un eCommerce relacionado en las plantas, esto debido porque le gusta mucho las flores. Para el desarrollo de este diseño utilicé la aplicación de Adobe XD.',
-      description2: 'Fue desarrollado principalmente como proyecto final para la aprobación del curso "Diseño de interfaces con Adobe XD" con Rocket Girls. En este curso se vieron aspectos como: la experiencia de usuario, técnicas para el buen desarrollo de interfaces gráficas y la psicología del color.',
-      sample: <img src={GrandmaGardenSample} width='100%' alt="this is an image"/>,
+      description1: "This design was inspired by my grandmother, which is reflected in both its name and the eCommerce concept focused on plants—she loves flowers. For the development of this design, I used Adobe XD.",
+      description2: "This project was primarily created as a final assignment for the 'UI Design with Adobe XD' course at Rocket Girls. The course covered topics such as user experience, best practices for graphical interface development, and color psychology.",
+      sample: <img src={GrandmaGardenSample} width='100%' alt="GrandmaGardenSample"/>,
     },
     {
       name: "🎒 Internships Management",
       image: PPP,
-      url:"",
+      url: "",
       source: "See on Github",
       sourceIcon: <GitHubIcon/>,
-      description1: 'Este es un sistema aplicativo web que fue realizado como proyecto social para la Universidad Centroamericana de forma grupal. El objetivo principal es el gestionamiento de estudiantes que vayan a realizar sus Prácticas Pre-Profesionales, desde aquí también se pueden convalidar la experiencia laboral que hayan hecho anteriormente o bien pueden aplicar a una de las opciones que aparecen en las ofertas.',
-      description2: 'Se desarrollo bajo el lenguaje de programación JSP y para esto se utilizó el IDE Eclipse. Para el frontend se utilizó la biblioteca de Bootstrap, también se implementó la generación de reportes haciendo uso de Jaspersoft Report. Como gestor de bases de datos se utilizó PostgreSQL.',
-      sample: <img src={PPPSample} width='100%' alt="this is an image"/>,
+      description1: "This is a web-based application developed as a social project for Universidad Centroamericana as a group effort. The main objective is to manage students who are about to complete their Pre-Professional Internships. Through this system, students can validate previous work experience or apply for available internship opportunities.",
+      description2: "Developed using JSP and the Eclipse IDE. The frontend was built with Bootstrap, and Jaspersoft Report was implemented for report generation. PostgreSQL was used as the database management system.",
+      sample: <img src={PPPSample} width='100%' alt="GitHubIcon"/>,
     },
     {
       name: "👩🏽‍💻 My Profile",
       image: MyProfile,
-      url:"mailto: renchifrabelle@gmail.com",
+      url: "mailto: renchifrabelle@gmail.com",
       source: "Send a recommendation",
       sourceIcon: <VolunteerActivismIcon/>,
-      description1: 'Hace tiempo me propuse en desarrollar una plataforma en donde pudiese hablar de mí y mostrar cada uno de los pequeños trabajos educativos que he venido realizando, he enfatizado mucho los proyectos que más me han gustado programar y en los que también me siento cómoda ejecutando, asi como también mostrar cada uno de los logros y certificaciones que he obtenido en todo este tiempo.',
-      description2: 'Este sitio web fue desarrollado desde cero, utilizando la libreria React.js en conjunto de Material UI, implementación de Email.js el cual permite enviar correos a través del formulario de contacto del sitio. Sí tienes alguna recomendación con gusto podrías contactarme y hacermelo saber, estaré muy feliz de escucharte.',
-      sample: <img src={MyProfileSample} width='100%' alt="this is an image"/>,
-    }
+      description1: "Some time ago, I set out to develop a platform where I could share more about myself and showcase the educational projects I have worked on. I have highlighted the projects I enjoyed programming the most and feel comfortable executing, as well as displaying the achievements and certifications I have obtained over time.",
+      description2: "This website was built from scratch using React.js along with Material UI, and it integrates Email.js to enable contact form submissions. If you have any recommendations, feel free to reach out—I’d be happy to hear from you!",
+      sample: <img src={MyProfileSample} width='100%' alt="MyProfileSample"/>,
+    },
   ];
 
   return(

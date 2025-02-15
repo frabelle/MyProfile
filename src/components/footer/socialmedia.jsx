@@ -37,12 +37,12 @@ const SocialMedia = () => {
 
             <Stack textAlign="left" direction="column" spacing={1.5}>
 
-                <Link underline='none' href="https://www.facebook.com/RenchiFrabelle" target={'_blank'}>
+                {/* <Link underline='none' href="https://www.facebook.com/RenchiFrabelle" target={'_blank'}>
                     <SocialItem direction="row" spacing={1}>
                         <FacebookIcon fontSize="medium" color="primary"/>
                         <Typography variant="body2">Renchi Frabelle</Typography>
                     </SocialItem>
-                </Link>
+                </Link> */}
 
                 <Link underline='none' href="https://github.com/frabelle" target={'_blank'}>
                     <SocialItem direction="row" spacing={1}>
@@ -51,12 +51,12 @@ const SocialMedia = () => {
                     </SocialItem>
                 </Link>
 
-                <Link underline='none' href="https://www.instagram.com/renchifrabelle/" target={'_blank'}>
+                {/* <Link underline='none' href="https://www.instagram.com/renchifrabelle/" target={'_blank'}>
                     <SocialItem direction="row" spacing={1}>
                         <InstagramIcon fontSize="medium" color="primary"/>
                         <Typography variant="body2">renchifrabelle</Typography>
                     </SocialItem>
-                </Link>
+                </Link> */}
 
                 <Link underline='none' href="https://www.linkedin.com/in/RenchiFrabelle" target={'_blank'}>
                     <SocialItem direction="row" spacing={1}>

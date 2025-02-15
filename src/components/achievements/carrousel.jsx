@@ -10,19 +10,41 @@ import Certificate from '../../image/achievements/certificate.png'
 const CarrouselAchievements = () => {
 
   const cards = [
+    
+    {
+      name: "Salesforce Certified AI Specialist",
+      image: License,
+      type: "Certification",
+      date: "January, 2025",
+      url: "https://www.salesforce.com/trailblazer/renchifrabelle"
+    },
+    {
+      name: "Salesforce Certified Associate AI",
+      image: License,
+      type: "Certification",
+      date: "January, 2025",
+      url: "https://www.salesforce.com/trailblazer/renchifrabelle"
+    },
+    {
+      name: "Salesforce Certified Associate",
+      image: License,
+      type: "Certification",
+      date: "May, 2024",
+      url: "https://www.salesforce.com/trailblazer/renchifrabelle"
+    },
     {
       name: "Salesforce Certified Platform App Builder",
       image: License,
       type: "Certification",
       date: "August, 2022",
-      url: "https://drive.google.com/file/d/1NefXn5aIUhX5bWTes-2X5FgAhLZ5XuNT/preview"
+      url: "https://www.salesforce.com/trailblazer/renchifrabelle"
     },
     {
       name: "Salesforce Certified Administrator",
       image: License,
       type: "Certification",
       date: "January, 2022",
-      url: "https://drive.google.com/file/d/1HRhHJ-3u6Ke3-lAewKO9nXQhkWvxaYu1/preview"
+      url: "https://www.salesforce.com/trailblazer/renchifrabelle"
     },
     {
       name: "Workshop: Introduction to Power BI",
